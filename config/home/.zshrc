@@ -61,7 +61,7 @@ function lc() {
 # oh-my-zsh
 
 plugins=(git node npm github zsh-autosuggestions alias-tips fast-syntax-highlighting)
-ZSH_THEME="stefanjudis"
+ZSH_THEME="denislanz"
 
 # Customize history
 HIST_STAMPS="yyyy-mm-dd"
