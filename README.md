@@ -1,4 +1,4 @@
-# Stefan's dotfiles
+# Dotfiles
 
 ## How to get started
 
