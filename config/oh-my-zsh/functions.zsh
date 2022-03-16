@@ -113,38 +113,3 @@ function clone() {
     npm install
   fi
 }
-
-function open-gql-playground() {
-  local ENDPOINT=$1
-  local AUTH_TOKEN=$2
-
-  open "graphql-playground://endpoint=$ENDPOINT?headers={\"Authorization\": \"Bearer $AUTH_TOKEN\"}"
-}
-
-function npm-diff() {
-  npm diff --diff=$1@$2 --diff=$1@$3 | delta --width $(tput cols) | less
-}
-
-function dev() {
-  echo "Running 'npm run dev' in $1 ..."
-  cd ~/Projects/"$1" || return
-  code .
-  npm run dev
-}
-
-function extract-text-from-image() {
-  if [ $# -eq 0 ]; then
-    echo "Please specify the file you want to scan.";
-    echo "  -> extract-text-from-image /some/path/image.png";
-    return 1;
-  fi
-
-  TARGET_DIR=$(dirname "$1");
-  FILENAME=$(basename -- "$1");
-  FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}";
-
-  tesseract "$1" "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt || return 1;
-  pbcopy < "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt";
-  rm "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt";
-  echo "🎉 Text copied to clipboard!";
-}

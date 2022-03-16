@@ -11,7 +11,6 @@ alias cat='bat'
 # ip address
 alias ip="echo Your ip is; dig +short myip.opendns.com @resolver1.opendns.com;"
 
-
 # set up https-server
 # https://paulbrowne.xyz/https-localhost
 alias https-server='http-server --ssl --cert ~/.ssl/localhost.crt --key ~/.ssl/localhost.key -a localhost -o'
@@ -44,9 +43,6 @@ alias mkdir="mkdir -v"
 
 # trash
 alias t=trash
-
-# MAC adress changer (free wifi hack)
-alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'`"
 
 # directory short cuts
 alias p='cd ~/Projects/'

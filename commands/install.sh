@@ -27,6 +27,12 @@ log_section_start "Sym linking files from $FROM_FILES to $TARGET_DIR"
 symlink_files "$FROM_FILES" "$TARGET_DIR"
 
 # **********************************
+# antibody and zsh plugins
+#
+curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
+antibody bundle < $CONFIG_DIR/zsh_plugins.txt > ~/.zsh_plugins.sh
+
+# **********************************
 # iTerm stuff
 #
 
@@ -68,18 +74,16 @@ echo "Installing fast-syntax-highlighting"
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 
 echo "Installing zsh-autosuggestions"
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 echo "Installing alias-tips"
-git clone git@github.com:djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+git clone https://github.com:djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
 
 # *************************************
 # Other scripts
-
 bash "$SCRIPTS_DIR/brew.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/mac.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/node.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/cask.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/code.sh" "$ROOT_DIR"
-bash "$SCRIPTS_DIR/go.sh" "$ROOT_DIR"
-bash "$SCRIPTS_DIR/rust.sh" "$ROOT_DIR"
+bash "$SCRIPTS_DIR/mas.sh" "$ROOT_DIR"

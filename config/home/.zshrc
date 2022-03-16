@@ -1,8 +1,56 @@
-export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$HOME/.go-modules/bin:/usr/local/opt/curl/bin:$HOME/.iterm2:$PATH
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
+
+export PATH=/usr/local/bin:/usr/local/sbin:/Users/D052787/.composer/vendor/bin:/Users/denislanz/Library/Python/3.10/bin::$PATH
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export EDITOR=nano
+export VISUAL="$EDITOR"
+
+eval "$(mcfly init zsh)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+# History[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000 SAVEHIST=10000
+
+setopt extended_history
+setopt hist_expire_dups_first
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt inc_append_history
+setopt share_history
+
+# Changing directories
+setopt auto_cd
+setopt auto_pushd
+unsetopt pushd_ignore_dups
+setopt pushdminus
+
+# Completion
+setopt auto_menu
+setopt always_to_end
+setopt complete_in_word
+unsetopt flow_control
+unsetopt prompt_subst
+setopt menu_complete
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+# Other
+setopt prompt_subst
+
+source ~/Dropbox/Sync/dotfiles/.zsh_plugins.sh
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export GOPATH=$HOME/.go-modules
 export EDITOR=code
 export LC_ALL=en_US.UTF-8
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='❗  Use the alias: '
@@ -67,22 +115,6 @@ ZSH_THEME="denislanz"
 HIST_STAMPS="yyyy-mm-dd"
 
 source $ZSH/oh-my-zsh.sh
-
-################################################################################
-# iterm
-
-# https://www.iterm2.com/documentation-shell-integration.html
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# set variables for iterm status bar
-iterm2_print_user_vars() {
-  it2git
-  iterm2_set_user_var nodeVersion $(node -v)
-  iterm2_set_user_var pwd $(pwd)
-}
-
-# mcfly
-eval "$(mcfly init zsh)"
 
 ################################################################################
 # nvm
@@ -191,3 +223,22 @@ fi
 ################################################################################
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
+
+################################################################################
+# iterm
+
+# https://www.iterm2.com/documentation-shell-integration.html
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# set variables for iterm status bar
+iterm2_print_user_vars() {
+  it2git
+  iterm2_set_user_var nodeVersion $(node -v)
+  iterm2_set_user_var pwd $(pwd)
+}
+
+# mcfly
+eval "$(mcfly init zsh)"

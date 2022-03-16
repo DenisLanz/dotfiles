@@ -11,7 +11,7 @@ ROOT_DIR=$1
 
 echo "installing VSCode"
 brew uninstall --cask --force visual-studio-code && brew install --cask visual-studio-code
-brew uninstall --cask --force visual-studio-code-insiders && brew install --cask visual-studio-code-insiders
+# brew uninstall --cask --force visual-studio-code-insiders && brew install --cask visual-studio-code-insiders
 
 if [ -f ~/Library/Application\ Support/Code/User/settings.json ]; then
   echo "found old visual studio code settings. removing..."
@@ -22,38 +22,47 @@ ln -s "$ROOT_DIR/config/visual-studio-code-settings.json" ~/Library/Application\
 
 brew tap homebrew/cask-versions
 
-echo "installing custom fonts"
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code
+# echo "installing custom fonts"
+# brew tap homebrew/cask-fonts
+# brew install --cask font-fira-code
 # Fira code with fancy italics
-open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Regular.ttf"
-open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Bold.ttf"
-open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Italic.ttf"
+#open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Regular.ttf"
+#open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Bold.ttf"
+#open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Italic.ttf"
 
-brew install --cask font-oswald
-brew install --cask font-ubuntu
+#brew install --cask font-oswald
+#brew install --cask font-ubuntu
 # terminal font
-brew install --cask font-caskaydia-cove-nerd-font
-brew install --cask graphql-playground
+#brew install --cask font-caskaydia-cove-nerd-font
+#brew install --cask graphql-playground
 
-brew tap jeroenknoops/tap
-brew install gitin
-
+# mardown quicklook
+# https://github.com/toland/qlmarkdown/
 brew install --cask qlmarkdown
+
+# Browser
 brew install --cask google-chrome
-brew install --cask google-chrome-canary
+brew install --cask chromium
 brew install --cask firefox
-brew install --cask firefox-nightly
+
+# iterm terminal replacement
 brew install --cask iterm2
 # install iterm utilities right away
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 
-brew install --cask sigmaos
-brew install --cask zoomus
 brew install --cask spotify
-brew install --cask ngrok
 brew install --cask bartender
-brew install --cask choosy
 brew install --cask rocket
 brew install --cask monitorcontrol
-brew install --cask screenflow
+brew install --cask alfred
+brew install --cask contexts
+brew install --cask maestral
+brew install --cask marked2
+brew install --cask divvy
+brew install --cask keycastr
+brew install --cask transmit
+brew install --cask little-snitch
+brew install --cask fliqlo
+brew install --cask monitorcontrol
+brew install --cask typeface
+brew install --cask fig
