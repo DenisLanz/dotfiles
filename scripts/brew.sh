@@ -47,6 +47,9 @@ brew_install_or_upgrade mcfly
 brew_install_or_upgrade ffmpeg
 
 # mkcert
-brew install mkcert
-brew install nss
+brew_install_or_upgrade mkcert
+brew_install_or_upgrade nss
 mkcert --install
+
+#https://github.com/junegunn/fzf
+brew_install_or_upgrade fzf
