@@ -238,5 +238,6 @@ iterm2_print_user_vars() {
 
 # mcfly
 eval "$(mcfly init zsh)"
+
 # Fig post block. Keep at the bottom of this file.
 eval "$(fig init zsh post)"
