@@ -66,3 +66,4 @@ brew install --cask fliqlo
 brew install --cask monitorcontrol
 brew install --cask typeface
 brew install --cask fig
+brew install --cask micro-snitch
