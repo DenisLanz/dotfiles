@@ -223,10 +223,6 @@ fi
 ################################################################################
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
-
 ################################################################################
 # iterm
 
@@ -242,3 +238,5 @@ iterm2_print_user_vars() {
 
 # mcfly
 eval "$(mcfly init zsh)"
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
