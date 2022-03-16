@@ -10,4 +10,3 @@ if [ -e "$COMMAND" ]; then
 else
   echo "$1 is no defined command"
 fi
-
