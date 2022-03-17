@@ -4,9 +4,6 @@ eval "$(fig init zsh pre)"
 
 export PATH=/usr/local/bin:/usr/local/sbin:/Users/D052787/.composer/vendor/bin:/Users/denislanz/Library/Python/3.10/bin::$PATH
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-export EDITOR=nano
-export VISUAL="$EDITOR"
 
 eval "$(mcfly init zsh)"
 
