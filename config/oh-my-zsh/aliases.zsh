@@ -45,6 +45,7 @@ alias mkdir="mkdir -v"
 alias t=trash
 
 # directory short cuts
-alias p='cd ~/Projects/'
-alias d='cd ~/Downloads/'
-alias dl='cd ~/Projects/github.com/denislanz/stefan-judis-website/'
+alias dm='cd ~/Documents/'
+alias dl='cd ~/Downloads/'
+alias dt='cd ~/Desktop/'
+
