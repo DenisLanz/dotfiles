@@ -33,6 +33,26 @@ function gif_to_video() {
   ffmpeg -i $2.mp4 -strict -2 $2.webm
 }
 
+function video_to_gif() {
+
+  if ! [ $# -eq 1 ]; then
+    echo "Wrong parameter usage: \n $ video_to_gif <inputFile>"
+    return 1
+  fi
+
+  input=$1
+  # strip the extension
+  name=$(echo "$input" | cut -f 1 -d '.')
+  
+  # get the video width
+  input_width=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 $input | awk -F'x' '{print $1 }')
+
+  # bisect input width
+  output_width=$(echo "scale=0;(${input_width}/2)" | bc)
+
+  ffmpeg -hide_banner -loglevel error -stats -i $input -filter_complex "[0:v]setpts=0.6*PTS[v];[v] fps=8,scale=w=${output_width}:h=-1,split [a][b];[a] palettegen=stats_mode=single [p];[b][p] paletteuse=new=1" $name.gif
+
+}
 
 #
 # watchman test.txt 1 echo 'Tada!'
