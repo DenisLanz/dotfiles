@@ -37,6 +37,7 @@ brew_install_or_upgrade coreutils
 # https://github.com/odlp/bluesnooze
 brew_install_or_upgrade bluesnooze
 
+# topgrade to update all the stuff
 brew_install_or_upgrade topgrade
 
 # mcfly
