@@ -47,6 +47,7 @@ fig
 micro-snitch
 hazel
 airfoil
+beardedspice
 )
 
 for cask in "${CASKS[@]}"
