@@ -77,7 +77,7 @@ echo "Installing zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 echo "Installing alias-tips"
-git clone https://github.com:djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
 
 # *************************************
 # Other scripts
