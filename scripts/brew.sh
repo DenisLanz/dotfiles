@@ -56,5 +56,8 @@ brew_install_or_upgrade mkcert
 brew_install_or_upgrade nss
 mkcert --install
 
+# ocrmypdf
+brew_install_or_upgrade ocrmypdf
+
 #https://github.com/junegunn/fzf
 brew_install_or_upgrade fzf
