@@ -28,6 +28,10 @@ brew_install_or_upgrade git
 brew_install_or_upgrade git-delta
 brew_install_or_upgrade git-lfs
 
+# finish git lfs installation
+git lfs install
+git lfs install --system
+
 # https://www.shellcheck.net
 brew_install_or_upgrade shellcheck
 
