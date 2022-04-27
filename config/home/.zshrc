@@ -1,7 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
-
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 export PATH=/usr/local/bin:/usr/local/sbin:/Users/D052787/.composer/vendor/bin:/Users/denislanz/Library/Python/3.10/bin::$PATH
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
@@ -237,4 +235,4 @@ iterm2_print_user_vars() {
 eval "$(mcfly init zsh)"
 
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
+. "$HOME/.fig/shell/zshrc.post.zsh"
