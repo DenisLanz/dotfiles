@@ -1,3 +1,12 @@
+
+echo "#############################"
+echo "# Install Mac App Store CLI and various Apps"
+echo "#############################"
+echo ""
+
+ROOT_DIR=$1
+source "$ROOT_DIR/commands/__util.sh"
+
 # install mac app store applications
 # https://github.com/mas-cli/mas
 
