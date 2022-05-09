@@ -48,6 +48,7 @@ micro-snitch
 hazel
 airfoil
 beardedspice
+docker
 )
 
 for cask in "${CASKS[@]}"

@@ -35,3 +35,6 @@ defaults write com.apple.finder CreateDesktop -bool false
 
 echo "Disable the “Are you sure you want to open this application?” dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo "Add Tags… Keyboard Shortcut cmd+shift+t"
+defaults write com.apple.finder NSUserKeyEquivalents {"Tags…"="@$t"\;}'

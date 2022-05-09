@@ -56,5 +56,11 @@ brew_install_or_upgrade mkcert
 brew_install_or_upgrade nss
 mkcert --install
 
+## ocr pdfs
+# ocrmypdf + additional languages
+brew_install_or_upgrade ocrmypdf
+brew_install_or_upgrade tesseract-lang
+brew_install_or_upgrade qpdf
+
 #https://github.com/junegunn/fzf
 brew_install_or_upgrade fzf

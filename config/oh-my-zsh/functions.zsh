@@ -9,7 +9,7 @@ cd(){
 
 # change directory and open in code
 cdc() {
- ( cd "$1" && code ./ )
+  cd "$1" && code ./;
 }
 
 # quickly look up a folder
