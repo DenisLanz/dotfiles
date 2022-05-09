@@ -68,7 +68,7 @@ echo "Remove delay when taking a screenshot"
 defaults write com.apple.screencapture show-thumbnail -bool false
 
 echo "Store screenshots in /tmp"
-defaults write com.apple.screencapture location /tmp
+defaults write com.apple.screencapture location ~/Downloads
 
 echo "Disable CMD+space for spotlight"
 /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
