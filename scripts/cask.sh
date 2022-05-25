@@ -49,6 +49,7 @@ hazel
 airfoil
 beardedspice
 docker
+tower
 )
 
 for cask in "${CASKS[@]}"
