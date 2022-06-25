@@ -25,7 +25,7 @@ brew tap homebrew/cask-versions
 CASKS=(
 google-chrome
 chromium
-firefox
+firefox-developer-edition
 iterm2
 qlmarkdown
 spotify
