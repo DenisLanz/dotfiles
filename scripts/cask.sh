@@ -50,6 +50,7 @@ airfoil
 beardedspice
 docker
 tower
+obsidian
 )
 
 for cask in "${CASKS[@]}"
