@@ -48,7 +48,7 @@ ZSH=$HOME/.oh-my-zsh
 
 export EDITOR=code
 export LC_ALL=en_US.UTF-8
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT='❗  Use the alias: '
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT='💡 Use the alias: '
 
 ################################################################################
 # private
