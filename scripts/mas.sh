@@ -43,3 +43,5 @@ mas install 1376402589
 mas install 290986013
 # Refined Github Safari Extension
 mas install 1519867270
+# Color Picker
+mas install 1545870783
