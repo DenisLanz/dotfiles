@@ -138,3 +138,15 @@ function clone() {
     npm install
   fi
 }
+
+# ✅ globs          – `trash file-*-.txt`
+# ✅ directories    – `trash directory`
+# ✅ multiple files - `trash file-1 dir-1 file-2`
+function trash() {
+  echo "🗑️  Moving files to trash..."
+
+  for var in "$@"
+  do
+    mv "$var" "$HOME/.trash"
+  done
+}
