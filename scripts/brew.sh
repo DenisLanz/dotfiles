@@ -9,7 +9,7 @@ ROOT_DIR=$1
 source "$ROOT_DIR/commands/__util.sh"
 
 # Install Homebrew if not already installed
-brew -v >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew -v >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew_install_or_upgrade zsh
 brew_install_or_upgrade zsh-completions
