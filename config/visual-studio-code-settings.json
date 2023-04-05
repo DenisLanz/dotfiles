@@ -139,5 +139,8 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
     "editor.detectIndentation": true,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "[python]": {
+        "editor.formatOnType": true
+    }
 }
