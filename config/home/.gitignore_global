@@ -34,3 +34,6 @@ Temporary Items
 
 # Compiled
 *.pyc
+
+# local config files
+wp-cli.yml
