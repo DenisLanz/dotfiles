@@ -235,7 +235,7 @@ iterm2_print_user_vars() {
 eval "$(mcfly init zsh)"
 
 # pnpm
-export PNPM_HOME="/Users/d052787/Library/pnpm"
+export PNPM_HOME="~/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
