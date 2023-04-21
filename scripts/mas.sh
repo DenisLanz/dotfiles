@@ -45,3 +45,7 @@ mas install 290986013
 mas install 1519867270
 # Color Picker
 mas install 1545870783
+# The Magic Highlighter
+mas install 1663033087
+# Play
+mas install 1596506190
