@@ -49,3 +49,5 @@ mas install 1545870783
 mas install 1663033087
 # Play
 mas install 1596506190
+# GifFox
+mas isntall 1461845568
