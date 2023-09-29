@@ -17,8 +17,6 @@ brew_install_or_upgrade mas
 mas install 1502839586
 # Amphetamine
 mas install 937984704
-# Bear
-mas install 1091189122
 # Dato
 mas install 1470584107
 # Drafts
