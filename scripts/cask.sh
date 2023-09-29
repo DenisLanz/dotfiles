@@ -41,8 +41,6 @@ keycastr
 transmit
 little-snitch
 fliqlo
-monitorcontrol
-typeface
 fig
 micro-snitch
 hazel
@@ -52,6 +50,7 @@ docker
 tower
 obsidian
 1password
+typeface
 )
 
 for cask in "${CASKS[@]}"

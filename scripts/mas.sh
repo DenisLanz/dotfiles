@@ -49,3 +49,11 @@ mas install 1663033087
 mas install 1596506190
 # GifFox
 mas isntall 1461845568
+# Velia
+mas isntall 1607635845
+# Command X
+mas install 6448461551
+# Play: Save Videos Watch Later
+mas isntall 1596506190
+# UnTrap for YouTube
+mas install 1637438059
