@@ -133,15 +133,14 @@
     "explorer.confirmDragAndDrop": false,
     "editor.wordWrap": "bounded",
     "diffEditor.ignoreTrimWhitespace": false,
-    "[scss]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
     "editor.detectIndentation": true,
     "[python]": {
         "editor.formatOnType": true
     },
-    "window.zoomLevel": 1,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "settingsSync.ignoredExtensions": [],
+    "editor.inlineSuggest.enabled": true,
+    "application.shellEnvironmentResolutionTimeout": 20
 }
