@@ -79,6 +79,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/cust
 echo "Installing alias-tips"
 git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
 
+echo "Installing spaceshipt-prompt"
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1 
+
 # *************************************
 # Other scripts
 bash "$SCRIPTS_DIR/brew.sh" "$ROOT_DIR"
