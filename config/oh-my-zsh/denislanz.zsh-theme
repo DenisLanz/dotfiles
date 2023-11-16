@@ -10,7 +10,7 @@ PROMPT='%(?, ,%{$fg[red]%} FAIL: $?%{$reset_color%}
 github_url() {
   # GitHub codepoint is supported by nerd fonts
   # CaskaydiaCove Nerd Font
-  GITHUB_ICON=""
+  GITHUB_ICON="\uf408"
 
   if [[ "$PWD" == *"github.com"*/*/* ]]; then
     echo "%{$fg_bold[blue]%} %3/ $GITHUB_ICON"
