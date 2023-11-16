@@ -30,7 +30,7 @@ setopt auto_menu
 setopt always_to_end
 setopt complete_in_word
 unsetopt flow_control
-unsetopt prompt_subst
+setopt prompt_subst
 setopt menu_complete
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
@@ -39,9 +39,8 @@ zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 # Other
-setopt prompt_subst
 
-source ~/Dropbox/Sync/dotfiles/.zsh_plugins.sh
+source ~/.zsh_plugins.sh
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -104,7 +103,8 @@ function lc() {
 # oh-my-zsh
 
 plugins=(git node npm github zsh-autosuggestions alias-tips fast-syntax-highlighting)
-ZSH_THEME="denislanz"
+#ZSH_THEME="denislanz"
+ZSH_THEME="spaceship"
 
 # Customize history
 HIST_STAMPS="yyyy-mm-dd"
@@ -113,106 +113,106 @@ source $ZSH/oh-my-zsh.sh
 
 ################################################################################
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+# [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+# autoload -U add-zsh-hook
+# load-nvmrc() {
+#   local node_version="$(nvm version)"
+#   local nvmrc_path="$(nvm_find_nvmrc)"
 
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+#   if [ -n "$nvmrc_path" ]; then
+#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+#     if [ "$nvmrc_node_version" = "N/A" ]; then
+#       nvm install
+#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
+#       nvm use
+#     fi
+#   elif [ "$node_version" != "$(nvm version default)" ]; then
+#     echo "Reverting to nvm default version"
+#     nvm use default
+#   fi
+# }
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
 
-# make global modules requireable
-export NODE_PATH="$(npm root -g)"
+# # make global modules requireable
+# export NODE_PATH="$(npm root -g)"
 
 ################################################################################
 # npm
 
-###-begin-npm-completion-###
-#
+##-begin-npm-completion-###
+
 # npm command completion script
-#
+
 # Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
 # Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
-#
 
-if type complete &>/dev/null; then
-  _npm_completion () {
-    local words cword
-    if type _get_comp_words_by_ref &>/dev/null; then
-      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
-    else
-      cword="$COMP_CWORD"
-      words=("${COMP_WORDS[@]}")
-    fi
 
-    local si="$IFS"
-    if ! IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           npm completion -- "${words[@]}" \
-                           2>/dev/null)); then
-      local ret=$?
-      IFS="$si"
-      return $ret
-    fi
-    IFS="$si"
-    if type __ltrim_colon_completions &>/dev/null; then
-      __ltrim_colon_completions "${words[cword]}"
-    fi
-  }
-  complete -o default -F _npm_completion npm
-elif type compdef &>/dev/null; then
-  _npm_completion() {
-    local si=$IFS
-    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
-                 COMP_LINE=$BUFFER \
-                 COMP_POINT=0 \
-                 npm completion -- "${words[@]}" \
-                 2>/dev/null)
-    IFS=$si
-  }
-  compdef _npm_completion npm
-elif type compctl &>/dev/null; then
-  _npm_completion () {
-    local cword line point words si
-    read -Ac words
-    read -cn cword
-    let cword-=1
-    read -l line
-    read -ln point
-    si="$IFS"
-    if ! IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       npm completion -- "${words[@]}" \
-                       2>/dev/null)); then
+# if type complete &>/dev/null; then
+#   _npm_completion () {
+#     local words cword
+#     if type _get_comp_words_by_ref &>/dev/null; then
+#       _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
+#     else
+#       cword="$COMP_CWORD"
+#       words=("${COMP_WORDS[@]}")
+#     fi
 
-      local ret=$?
-      IFS="$si"
-      return $ret
-    fi
-    IFS="$si"
-  }
-  compctl -K _npm_completion npm
-fi
+#     local si="$IFS"
+#     if ! IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+#                            COMP_LINE="$COMP_LINE" \
+#                            COMP_POINT="$COMP_POINT" \
+#                            npm completion -- "${words[@]}" \
+#                            2>/dev/null)); then
+#       local ret=$?
+#       IFS="$si"
+#       return $ret
+#     fi
+#     IFS="$si"
+#     if type __ltrim_colon_completions &>/dev/null; then
+#       __ltrim_colon_completions "${words[cword]}"
+#     fi
+#   }
+#   complete -o default -F _npm_completion npm
+# elif type compdef &>/dev/null; then
+#   _npm_completion() {
+#     local si=$IFS
+#     compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+#                  COMP_LINE=$BUFFER \
+#                  COMP_POINT=0 \
+#                  npm completion -- "${words[@]}" \
+#                  2>/dev/null)
+#     IFS=$si
+#   }
+#   compdef _npm_completion npm
+# elif type compctl &>/dev/null; then
+#   _npm_completion () {
+#     local cword line point words si
+#     read -Ac words
+#     read -cn cword
+#     let cword-=1
+#     read -l line
+#     read -ln point
+#     si="$IFS"
+#     if ! IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+#                        COMP_LINE="$line" \
+#                        COMP_POINT="$point" \
+#                        npm completion -- "${words[@]}" \
+#                        2>/dev/null)); then
+
+#       local ret=$?
+#       IFS="$si"
+#       return $ret
+#     fi
+#     IFS="$si"
+#   }
+#   compctl -K _npm_completion npm
+# fi
 ###-end-npm-completion-###
 
 ################################################################################
