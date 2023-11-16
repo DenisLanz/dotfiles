@@ -76,3 +76,7 @@ brew_install_or_upgrade m-cli
 
 #https://github.com/junegunn/fzf
 brew_install_or_upgrade fzf
+
+## Sheldon Shell Plugin Manager
+# https://github.com/rossmacarthur/sheldon#homebrew
+brew_install_or_upgrade sheldon
