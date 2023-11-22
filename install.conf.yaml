@@ -1,0 +1,43 @@
+- defaults:
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+    
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+
+- link:
+    ~/:
+      glob: true
+      path: home/.*
+      create: true
+      relink: true
+      force: true
+    
+- create:
+    - ~/.config
+
+- shell:
+    - description: Test Scripts     
+      command: ./scripts/test
+
+    # - description: Installing submodules
+    #   command: git submodule update --init --recursive
+
+    # - description: Installing homebrew and dependencies
+    #   command: ./scripts/brew
+
+    # - description: Installing sheldon
+    #   command: ./scripts/sheldon
+
+    # - description: Installing brew casks
+    #   command: ./scripts/casks
+    
+    # - description: Installing mac appstore apps
+    #   command: ./scripts/mas
+    
+    # - description: Configuring macOS
+    #   command: ./scripts/mcli
