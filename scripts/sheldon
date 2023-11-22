@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+source "${ROOT_DIR}/_utils"
+
+if _exists "sheldon"; then
+	exit 0
+fi
+
+if _exists "brew"; then
+	_brew_install_or_upgrade sheldon
+else 
+	INSTALLER=https://rossmacarthur.github.io/install/crate.sh
+	BIN="$HOME/.local/bin"
+	curl --proto '=https' -fLsS "$INSTALLER" | bash -s -- --repo rossmacarthur/sheldon --to "$BIN"
+fi

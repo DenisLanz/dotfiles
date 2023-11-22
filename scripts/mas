@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+source "${ROOT_DIR}/_utils"
+
+# only continue if on macOS
+_is_macOS
+
+if ! _exists "mas"; then
+	_brew_install_or_upgrade "mas"
+fi
+
+
+APPS=(
+	1376402589 # Stop the Madness
+	1435957248 # Drafts
+	1461845568 # GifFox 2
+	1470584107 # Dato
+	1481302432 # Instapaper Save
+	1502839586 # Hand mirror
+	1515445551 # Pi-Hole Remote
+	1519867270 # Refined Github
+	1528890965 # TextSniper
+	1529448980 # Reeder
+	1545870783 # Color Picker
+	1596506190 # Play
+	1607635845 # Velia
+	1637438059 # UnTrap
+	1663033087 # The Magic Highlighter
+	290986013 # Deliveries
+	510109287 # Short Menu
+	554314609 # Dropmark
+	6448461551 # Command X
+	904280696 # Things
+	937984704 # Amphetamine
+)
+
+
+if _exists "mas"; then
+
+	for APP in "${APPS[@]}"
+	do
+		mas install "$APP"
+	done
+
+fi

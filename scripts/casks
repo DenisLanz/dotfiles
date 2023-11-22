@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+source "${ROOT_DIR}/_utils"
+
+_is_macOS
+
+brew tap homebrew/cask-versions
+
+CASKS=(
+	1password
+	airfoil
+	alfred
+	bartender
+	beardedspice
+	bluesnooze # https://github.com/odlp/bluesnooze
+	chromium
+	contexts
+	divvy
+	docker
+	fig
+	firefox-developer-edition
+	fliqlo
+	google-chrome
+	hazel
+	iterm2
+	keycastr
+	kaleidoscope2
+	little-snitch
+	maestral # https://github.com/samschott/maestral
+	marked2
+	micro-snitch
+	monitorcontrol
+	obsidian
+	qlmarkdown
+	rocket
+	spotify
+	tower
+	transmit
+	typeface
+	visual-studio-code
+)
+
+for cask in "${CASKS[@]}"
+do
+	_brew_install_or_upgrade --cask "$cask"
+done
+
+# install iterm utilities right away
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash

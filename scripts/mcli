@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+source "${ROOT_DIR}/_utils"
+
+# only continue if on macOS
+_is_macOS
+
+if _exists "brew"; then
+	_brew_install_or_upgrade m-cli
+fi
+

@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+e='\033'
+RESET="${e}[0m"
+BOLD="${e}[1m"
+CYAN="${e}[0;96m"
+RED="${e}[0;91m"
+YELLOW="${e}[0;93m"
+GREEN="${e}[0;92m"
+
+# Success reporter
+info() {
+    echo -e "${CYAN}${*}${RESET}"
+}
+
+# Error reporter
+error() {
+    echo -e "${RED}${*}${RESET}"
+}
+
+# Success reporter
+success() {
+    echo -e "${GREEN}${*}${RESET}"
+}
+
+# check if a command exists
+_exists() {
+	command -v "$1" > /dev/null 2>&1
+}
+
+# Install Brew Package or Update it if it already exists
+_brew_install_or_upgrade() {
+    if _exists "brew"; then 
+        
+        if [ -z "$2" ]; then
+            FORMULA="$1"
+        else
+            FORMULA="$2"
+        fi
+
+        export HOMEBREW_NO_AUTO_UPDATE=1 
+        export HOMEBREW_NO_ENV_HINTS=1
+
+        if brew ls --versions "$1" "$2" >/dev/null; then
+            if brew outdated "$1" "$2" > /dev/null; then
+                info "$BOLD$FORMULA$RESET already installed and up to date ✅"
+            else 
+                echo "Option 1"
+                brew upgrade "$1" "$2"
+            fi
+
+        else
+            echo "Option 2"
+            brew install "$1" "$2"
+        fi
+        
+        export -n HOMEBREW_NO_AUTO_UPDATE
+        export -n HOMEBREW_NO_ENV_HINTS
+    
+    fi
+}
+
+# Extend $PATH without duplicates
+_extend_path() {
+    [[ -d "$1" ]] || return
+
+    IN_PATH="echo '$PATH' | tr ":" '\n' | grep -qx '$1'"
+
+    if ! eval "$IN_PATH" ; then
+        export PATH="$1:$PATH"
+    fi
+}
+
+# exit if not macOS
+_is_macOS() {
+    if [ "$(uname)" != "Darwin" ]; then
+        return
+    fi
+}
+
+_cmd_all(){
+	local command="$1";
+	shift
+	local params_array=("$@");
+
+	for param in "${params_array[@]}"
+    do
+        eval "$command $param"
+    done
+}
