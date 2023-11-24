@@ -12,36 +12,38 @@ fi
 
 # stuff ot install
 FORMULAS=(
-	autojump # history based directory navigation  - https://github.com/wting/autojump
-	coreutils # GNU File, Shell, and Text utilities - https://www.gnu.org/software/coreutils
-	lsa # replacement for ls. https://github.com/lsd-rs/lsd
-	ffmpeg # multimedia handling - https://github.com/FFmpeg/FFmpeg
-	gh # github command line interface - https://github.com/cli/cli
-	glow # Render markdown on the CLI https://github.com/charmbracelet/glow
-	htop # cross-platform interactive process viewer https://github.com/htop-dev/htop/
-	mcfly # improve shell h istory search - https://github.com/cantino/mcfly
-	mkcert # local dev certificates - https://github.com/FiloSottile/mkcert
-	nss # Network Security Services - https://github.com/nss-dev/nss
-	ocrmypdf # OCR PDF Files (tesseract abstraction) - https://github.com/ocrmypdf/OCRmyPDF
-	qpdf # content-preserving transformations on PDF files - https://github.com/qpdf/qpdf
-	tesseract-lang # languages for OCR - https://github.com/tesseract-ocr/tesseract
-	topgrade # Upgrade all the things - https://github.com/topgrade-rs/topgrade
-	zsh # Z-Shell : https://github.com/zsh-users/zsh
-	terminal-notifier # send notifications from the terminal : https://github.com/julienXX/terminal-notifier
-	tlrc # simpler, more approachable complement to traditional man pages : https://github.com/tldr-pages/tldr
-	bat # cat with syntax highlighting : https://github.com/sharkdp/bat
+autojump # history based directory navigation  - https://github.com/wting/autojump
+coreutils # GNU File, Shell, and Text utilities - https://www.gnu.org/software/coreutils
+lsa # replacement for ls. https://github.com/lsd-rs/lsd
+ffmpeg # multimedia handling - https://github.com/FFmpeg/FFmpeg
+gh # github command line interface - https://github.com/cli/cli
+glow # Render markdown on the CLI https://github.com/charmbracelet/glow
+htop # cross-platform interactive process viewer https://github.com/htop-dev/htop/
+mcfly # improve shell h istory search - https://github.com/cantino/mcfly
+mkcert # local dev certificates - https://github.com/FiloSottile/mkcert
+nss # Network Security Services - https://github.com/nss-dev/nss
+ocrmypdf # OCR PDF Files (tesseract abstraction) - https://github.com/ocrmypdf/OCRmyPDF
+qpdf # content-preserving transformations on PDF files - https://github.com/qpdf/qpdf
+tesseract-lang # languages for OCR - https://github.com/tesseract-ocr/tesseract
+topgrade # Upgrade all the things - https://github.com/topgrade-rs/topgrade
+zsh # Z-Shell : https://github.com/zsh-users/zsh
+terminal-notifier # send notifications from the terminal : https://github.com/julienXX/terminal-notifier
+tlrc # simpler, more approachable complement to traditional man pages : https://github.com/tldr-pages/tldr
+bat # cat with syntax highlighting : https://github.com/sharkdp/bat
 )
 
 # install all the stuff
+
 for FORMULA in "${FORMULAS[@]}"
 do
-	_brew_install_or_upgrade "$FORMULA"
+	echo "${FORMULA}"
+#	_brew_install_or_upgrade "${FORMULA}"
 done
 
 # complete mkcert
-if _exists "mkcert"; then 
+if _exists "mkcert"; then
 	mkcert --install
 fi
 
-# cleanup 
+# cleanup
 brew cleanup
