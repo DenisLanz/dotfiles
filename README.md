@@ -25,7 +25,7 @@
 	 - https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 - omz Plugins
 	- SSH-Agent | https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ssh-agent
-- Coding Font alternative to to `Operator Mono` sync automatically  
+- Coding Font alternative to to `Operator Mono` sync automatically
 	- Fonts
 		- Regular : https://github.com/tonsky/FiraCode / https://github.com/betaboon/nerd-fonts-patcher
 		- Italic : https://fonts.google.com/specimen/Yellowtail
@@ -79,9 +79,11 @@
 - Check and remove dotfiles from abandoned Dropbox Folder
 - Add github credentials manager
 	- https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
+- Check prettier to be part of the dotfiles
+	- https://prettier.io
 
 ## Ideas
 - Sync Fonts (?)
 	- https://github.com/rsms/inter
-- automatic git based .dotfile management 
+- automatic git based .dotfile management
 	- https://mitxela.com/projects/dotfiles_management
