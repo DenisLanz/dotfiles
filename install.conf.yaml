@@ -24,6 +24,14 @@
       relink: true
       force: true
 
+- link:
+    ~/Library/Application Support/Code/User/:
+      glob: true
+      path: home/vscode/**/*
+      create: true
+      relink: true
+      force: true
+
 - create:
     - ~/.config
 
