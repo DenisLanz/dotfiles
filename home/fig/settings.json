@@ -1,0 +1,7 @@
+{
+  "app.disableAutoupdates": true,
+  "autocomplete.fontFamily": "OperatorMonoLig Nerd Font Mono Medium",
+  "autocomplete.fontSize": 14,
+  "autocomplete.keybindings.enter": "insertSelected",
+  "autocomplete.keybindings.tab": "insertSelected"
+}
