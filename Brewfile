@@ -47,7 +47,7 @@ cask "1password"
 cask "alfred"
 cask "fliqlo"
 cask "keycastr"
-cask "marked2"
+cask "marked"
 cask "obsidian"
 cask "rocket"
 cask "spotify"
@@ -93,7 +93,7 @@ cask "qlmarkdown" # https://github.com/sbarex/QLMarkdown
 # Mac Appstore Applications
 # ------------------------------------------------------------------------------
 
-mas "StopTheMadness", id: 376402589
+mas "StopTheMadness", id: 1376402589
 mas "Drafts", id: 1435957248
 mas "Gifox 2: GIF Recorder & Editor", id: 1461845568
 mas "Dato", id: 1470584107
