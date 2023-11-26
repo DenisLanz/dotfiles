@@ -36,9 +36,8 @@
     - ~/.config
 
 - shell:
-    - description: Test Scripts
-      command: ./scripts/test
-
     - description: Installing submodules
       command: git submodule update --init --recursive
 
+    - description: Setup macOS defaults
+      command: ./scripts/mac
