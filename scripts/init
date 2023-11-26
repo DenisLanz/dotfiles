@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+source "${ROOT_DIR}/_utils"
+
+# only continue if on macOS
+_is_macOS
+
+# and install brew if it is not already installed
+if ! _exists "brew"; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if _exists "brew"; then
+	brew bundle --file=$DOTFILES/Brewfile
+fi
+
+
+
+# complete mkcert
+if _exists "mkcert"; then
+	mkcert --install
+fi
+
+# cleanup
+brew cleanup

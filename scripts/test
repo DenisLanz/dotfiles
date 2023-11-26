@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
-source "${ROOT_DIR}/_utils"
-
-
