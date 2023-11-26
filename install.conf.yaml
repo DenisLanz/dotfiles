@@ -42,20 +42,3 @@
     - description: Installing submodules
       command: git submodule update --init --recursive
 
-    - description: Installing sheldon
-      command: ./scripts/sheldon
-
-    - description: Installing node through nvm
-      command: ./scripts/node
-
-    - description: Configuring macOS
-      command: ./scripts/mcli
-
-    # - description: Installing brew casks
-    #   command: ./scripts/casks
-
-    # - description: Installing mac appstore apps
-    #   command: ./scripts/mas
-
-    # - description: Installing homebrew and dependencies
-    #   command: ./scripts/brew
