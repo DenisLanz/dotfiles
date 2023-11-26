@@ -4,6 +4,9 @@
 # ------------------------------------------------------------------------------
 # CLI Tools
 # ------------------------------------------------------------------------------
+
+brew "git" # Distributed revision control system - https://git-scm.com
+brew "git-lfs" # Git extension for versioning large files - https://git-lfs.github.com/
 brew "autojump" # history based directory navigation  - https://github.com/wting/autojump
 brew "zsh" # Z-Shell : https://github.com/zsh-users/zsh
 brew "coreutils" # GNU File, Shell, and Text utilities - https://www.gnu.org/software/coreutils
@@ -25,7 +28,10 @@ brew "ffmpeg" # multimedia handling - https://github.com/FFmpeg/FFmpeg
 brew "tesseract-lang" # languages for OCR - https://github.com/tesseract-ocr/tesseract
 brew "qpdf" # content-preserving transformations on PDF files - https://github.com/qpdf/qpdf
 brew "ocrmypdf" # OCR PDF Files (tesseract abstraction) - https://github.com/ocrmypdf/OCRmyPDF
-brew "m-cli" # macOS command line tool https://github.com/rgcr/m-cli
+brew "m-cli" # macOS command line tool - https://github.com/rgcr/m-cli
+brew "ffmpeg" # Play, record, convert, and stream audio and video - https://ffmpeg.org/
+brew "composer" # Dependency Manager for PHP - https://getcomposer.org/
+brew "gifsicle" # GIF image/animation creator/editor - https://www.lcdf.org/gifsicle/
 
 # ------------------------------------------------------------------------------
 # Taps
@@ -108,3 +114,6 @@ mas "Dropmark", id: 554314609
 mas "Command X", id: 6448461551
 mas "Things", id: 904280696
 mas "Amphetamine", id: 937984704
+mas "Sequel Ace", id: 1518036000
+mas "Spark", id: 1176895641
+mas "ytdistract", id: 1637438059
