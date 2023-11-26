@@ -10,7 +10,7 @@ brew "git-lfs" # Git extension for versioning large files - https://git-lfs.gith
 brew "autojump" # history based directory navigation  - https://github.com/wting/autojump
 brew "zsh" # Z-Shell : https://github.com/zsh-users/zsh
 brew "coreutils" # GNU File, Shell, and Text utilities - https://www.gnu.org/software/coreutils
-brew "lsa" # replacement for ls. https://github.com/lsd-rs/lsd
+brew "lsd" # replacement for ls. https://github.com/lsd-rs/lsd
 brew "gh" # github command line interface - https://github.com/cli/cli
 brew "glow" # Render markdown on the CLI https://github.com/charmbracelet/glow
 brew "htop" # cross-platform interactive process viewer https://github.com/htop-dev/htop/
@@ -117,3 +117,4 @@ mas "Amphetamine", id: 937984704
 mas "Sequel Ace", id: 1518036000
 mas "Spark", id: 1176895641
 mas "ytdistract", id: 1637438059
+mas "1Password for Safari", id: 1569813296
