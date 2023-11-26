@@ -3,7 +3,7 @@
 	email = 5640155+DenisLanz@users.noreply.github.com
 
 [core]
-	
+
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
@@ -155,6 +155,3 @@ renames = copies
 [push]
     default = current
     autoSetupRemote = true
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
