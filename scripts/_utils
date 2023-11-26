@@ -47,3 +47,14 @@ _is_macOS() {
         return
     fi
 }
+
+_cmd_all(){
+	local command="$1";
+	shift
+	local params_array=("$@");
+
+	for param in "${params_array[@]}"
+    do
+        eval "$command $param"
+    done
+}
