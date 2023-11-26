@@ -14,8 +14,6 @@ if _exists "brew"; then
 	brew bundle --file=$DOTFILES/Brewfile
 fi
 
-
-
 # complete mkcert
 if _exists "mkcert"; then
 	mkcert --install
@@ -23,3 +21,5 @@ fi
 
 # cleanup
 brew cleanup
+
+source $DOTFILES/install
