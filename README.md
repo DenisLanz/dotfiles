@@ -12,12 +12,6 @@
 - https://github.com/jlengstorf/dotfiles
 
 ## Todo
-- Port brew, mcli and cask to brew bundle
-	- https://thoughtbot.com/blog/brewfile-a-gemfile-but-for-homebrew?cmdf=brewfile
-
-	- Utilize Homebrew-File to Manage brewfile
-		- https://github.com/rcmdnk/homebrew-file
-		- https://homebrew-file.readthedocs.io/en/latest/usage.html#brewfile
 - port mac default setup from scripts/macos to m-cli
 	 - https://github.com/rgcr/m-cli
 	 - https://github.com/yannbertrand/macos-defaults
