@@ -75,6 +75,7 @@
 	- https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
 - Check prettier to be part of the dotfiles
 	- https://prettier.io
+- Use 1Password to manage ssh keys and make the config local
 - remove Fig as it is abandoned and repalce autocomplete with
  - https://github.com/Aloxaf/fzf-tab
 
