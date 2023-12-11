@@ -65,6 +65,7 @@ cask "bluesnooze" # https://github.com/odlp/bluesnooze
 cask "beardedspice"
 cask "bartender"
 cask "maestral" # https://github.com/samschott/maestral
+cask "hazel"
 
 # Development
 cask "visual-studio-code"
