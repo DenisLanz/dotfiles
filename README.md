@@ -75,6 +75,8 @@
 	- https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
 - Check prettier to be part of the dotfiles
 	- https://prettier.io
+- remove Fig as it is abandoned and repalce autocomplete with
+ - https://github.com/Aloxaf/fzf-tab
 
 ## Ideas
 - Sync Fonts (?)
