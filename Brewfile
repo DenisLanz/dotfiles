@@ -83,7 +83,6 @@ cask "google-chrome"
 cask "chromium"
 
 # Quicklook Plugins
-cask "qlcolorcode" # https://github.com/anthonygelibert/QLColorCode
 cask "qlstephen" # https://github.com/whomwah/qlstephen
 cask "quicklook-json" # https://github.com/sindresorhus/quick-look-plugins
 cask "qlimagesize" # https://github.com/Nyx0uf/qlImageSize
