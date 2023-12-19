@@ -124,3 +124,4 @@ mas "Sequel Ace", id: 1518036000
 mas "Spark", id: 1176895641
 mas "ytdistract", id: 1637438059
 mas "1Password for Safari", id: 1569813296
+mas "One Thing", id: 1604176982
