@@ -32,11 +32,13 @@ brew "m-cli" # macOS command line tool - https://github.com/rgcr/m-cli
 brew "ffmpeg" # Play, record, convert, and stream audio and video - https://ffmpeg.org/
 brew "composer" # Dependency Manager for PHP - https://getcomposer.org/
 brew "gifsicle" # GIF image/animation creator/editor - https://www.lcdf.org/gifsicle/
+brew "fzf" # general-purpose command-line fuzzy finder - https://github.com/junegunn/fzf
 
 # ------------------------------------------------------------------------------
 # Taps
 # ------------------------------------------------------------------------------
 
+tap "homebrew/cask-fonts"
 
 # ------------------------------------------------------------------------------
 # Casks
@@ -88,6 +90,10 @@ cask "quicklook-json" # https://github.com/sindresorhus/quick-look-plugins
 cask "qlimagesize" # https://github.com/Nyx0uf/qlImageSize
 cask "webpquicklook" # https://github.com/dchest/webp-quicklook
 cask "qlmarkdown" # https://github.com/sbarex/QLMarkdown
+
+
+# Fonts
+# cask "font-victor-mono" # Font management done w/ typeface app
 
 # ------------------------------------------------------------------------------
 # Mac Appstore Applications
