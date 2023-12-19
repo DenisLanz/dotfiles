@@ -1,0 +1,3 @@
+# ignore system specific modifications
+local/**/*
+!local/README.md

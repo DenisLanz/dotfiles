@@ -1,5 +1,9 @@
 
 ## Todo
+- [ ] Identify / Figure Out how to specify local/machine specific configuations
+  - [ ] 1Password SSH Agent / ZSH Agent
+  - [ ] wpcli
+  - [ ] Brewfile in general?
 - [ ] Improve load performance
   - [ ] https://joshghent.com/zsh-speed/?cmdf=zsh+load++times
   - [ ] Switch from OMZ to Powerlevel10k (?)
@@ -12,7 +16,6 @@
 	 - [ ] https://github.com/yannbertrand/macos-defaults
 	 - [ ] https://macos-defaults.com
 	 - [ ] https://github.com/mathiasbynens/dotfiles/blob/main/.macos
-
 - [ ] Explore possible Usecases and integration for Hammerspoon
   - [ ] http://www.hammerspoon.org
 
