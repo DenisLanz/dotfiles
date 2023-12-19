@@ -7,14 +7,12 @@ Desktop.ini
 # Icon must end with two \r
 Icon
 
-# Archives
-
-00_archive/*
-
-# interrim folder
-00_interrim/
-interrim/
-
+# Temporary Folders
+*archive*/
+*interrim*/
+*tmp*/
+*temp*/
+*temporary*/
 # Thumbnails
 ._*
 Thumbs.db
@@ -34,6 +32,3 @@ Temporary Items
 
 # Compiled
 *.pyc
-
-# local config files
-wp-cli.yml
