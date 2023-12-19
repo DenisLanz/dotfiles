@@ -1,12 +1,26 @@
 
 ## Todo
+- [ ] Improve load performance
+  - [ ] https://joshghent.com/zsh-speed/?cmdf=zsh+load++times
+  - [ ] Switch from OMZ to Powerlevel10k (?)
+    - [ ] https://github.com/romkatv/powerlevel10k#oh-my-zsh
+  - [ ] Replace nvm/yarn/pnpm/npm with asdf to improve terminal performace/load time
+    - [ ] https://github.com/asdf-vm/asdf
+- [ ] Fix Issues with jumping curser in prompt on autosuggestions
 - [ ] port mac default setup from scripts/macos to m-cli
 	 - [ ] https://github.com/rgcr/m-cli
 	 - [ ] https://github.com/yannbertrand/macos-defaults
 	 - [ ] https://macos-defaults.com
 	 - [ ] https://github.com/mathiasbynens/dotfiles/blob/main/.macos
-- [-] omz Plugins
-	- [-] SSH-Agent | https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ssh-agent
+
+- [ ] Explore possible Usecases and integration for Hammerspoon
+  - [ ] http://www.hammerspoon.org
+
+- [x] omz Plugins
+	- [x] SSH-Agent | https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ssh-agent
+- [-] evaluate why zgen might be superiour to sheldon
+  - [-] https://github.com/tarjoilija/zgen
+  - [x] -> https://github.com/rossmacarthur/zsh-plugin-manager-benchmark?cmdf=sheldon+vs+zgen
 - [x] Coding Font alternative to to `Operator Mono` sync automatically
 	- [x] Fonts
 		- [-] Regular : https://github.com/tonsky/FiraCode / https://github.com/betaboon/nerd-fonts-patcher
