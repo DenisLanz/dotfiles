@@ -40,6 +40,7 @@ plugins=(
 	docker
 	docker-compose
 	colored-man-pages
+	ssh-agent
 )
 
 # zsh options
