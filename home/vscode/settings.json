@@ -39,10 +39,10 @@
 		"accessibilitySupport": "off",
 		"bracketPairColorization.enabled": true,
 		"detectIndentation": false,
-		"fontFamily": "'OperatorMonoLig Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
-		"fontLigatures": true,
+		"fontFamily": "'Victor Mono', Menlo, Monaco, 'Courier New', monospace",
+		"fontLigatures":  "'ss01'",
 		"fontSize": 14,
-		"fontWeight": "normal",
+		"fontWeight": "medium",
 		"inlineSuggest.enabled": true,
 		"insertSpaces": false,
 		"semanticHighlighting.enabled": true,
@@ -52,22 +52,32 @@
 		"tokenColorCustomizations": {
 			"textMateRules": [
 				{
-					"scope": [
-						"comment",
-						"keyword",
-						"storage.modifier",
-						"storage.type.class.js",
-						"storage.type.js"
-					],
-					"settings": {
-						"fontStyle": "italic bold"
-					}
+				"scope": [
+					//following will be in italic
+					"comment",
+					"entity.name.type.class", //class names
+					"keyword", //import, export, return…
+					"constant", //String, Number, Boolean…, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js" //class keyword
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
 				},
 				{
-					"scope": ["keyword.control.conditional", "keyword.operator"],
-					"settings": {
-						"fontStyle": ""
-					}
+				"scope": [
+					//following will be excluded from italics (VSCode has some defaults for italics)
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric.decimal.js",
+					"constant.numeric.json"
+				],
+				"settings": {
+					"fontStyle": "regular"
+				}
 				}
 			]
 		},
@@ -157,7 +167,19 @@
 	],
 	"shellcheck.customArgs": ["--external-sources"],
 	"todo-tree": {
-		"general.showIconsInsteadOfTagsInStatusBar": true,
+		"general": {
+			"showIconsInsteadOfTagsInStatusBar": true,
+			"tags": [
+				"BUG",
+				"HACK",
+				"FIXME",
+				"TODO",
+				"XXX",
+				"[ ]",
+				"[x]",
+				"[-]"
+			]
+		},
 		"tree":{
 			"showBadges": true,
 			"grouped": true
@@ -200,6 +222,9 @@
 			}
 		}
 	},
+	"redhat": {
+		"telemetry.enabled": false
+	}
 	"[python]": {
 		"editor.formatOnType": true
 	}
