@@ -18,13 +18,6 @@
       force: true
 
 - link:
-    ~/.fig/settings.json:
-      path: home/fig/settings.json
-      create: true
-      relink: true
-      force: true
-
-- link:
     ~/Library/Application Support/Code/User/:
       glob: true
       path: home/vscode/**/*
