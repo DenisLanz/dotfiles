@@ -68,6 +68,7 @@ cask "beardedspice"
 cask "bartender"
 cask "maestral" # https://github.com/samschott/maestral
 cask "hazel"
+cask "arq" # https://www.arqbackup.com
 
 # Development
 cask "visual-studio-code"
