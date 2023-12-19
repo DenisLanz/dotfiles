@@ -192,6 +192,10 @@
 				"[x]": {
 					"icon": "check-circle-fill",
 					"iconColor": "green"
+				},
+				"[-]": {
+					"icon": "circle-slash",
+					"iconColor": "red"
 				}
 			}
 		}
