@@ -3,13 +3,35 @@
 - [ ] Identify / Figure Out how to specify local/machine specific configuations
   - [ ] 1Password SSH Agent / ZSH Agent
   - [ ] wpcli
-  - [ ] Brewfile in general?
+  - [ ] Brewfile in general? [use-machine-specific-brewfile](https://homebrew-file.readthedocs.io/en/latest/usage.html?cmdf=Brewfile+load+environment+variables#use-machine-specific-brewfile)
 - [ ] Improve load performance
   - [ ] https://joshghent.com/zsh-speed/?cmdf=zsh+load++times
   - [ ] Switch from OMZ to Powerlevel10k (?)
     - [ ] https://github.com/romkatv/powerlevel10k#oh-my-zsh
   - [ ] Replace nvm/yarn/pnpm/npm with asdf to improve terminal performace/load time
     - [ ] https://github.com/asdf-vm/asdf
+
+	```bash
+		installAsdf() {
+	# Clone repository
+	echo "[INFO] Cloning asdf repository...";
+	git clone https://github.com/asdf-vm/asdf.git ~/.asdf;
+
+	echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+	echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+	source ~/.bashrc
+
+	# Install useful plugins (at least for me :D)
+	echo "[INFO] Installing asdf plugins...";
+	source $HOME/.asdf/asdf.sh;
+
+	asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git;
+	asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git;
+	asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git;
+	asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git;
+	}
+	```
+
 - [ ] Fix Issues with jumping curser in prompt on autosuggestions
 - [ ] port mac default setup from scripts/macos to m-cli
 	 - [ ] https://github.com/rgcr/m-cli
@@ -18,6 +40,8 @@
 	 - [ ] https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 - [ ] Explore possible Usecases and integration for Hammerspoon
   - [ ] http://www.hammerspoon.org
+- [ ] Explore possible Usecases and integration for Scriptkit
+  - [ ] https://www.scriptkit.com
 
 - [x] omz Plugins
 	- [x] SSH-Agent | https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ssh-agent
