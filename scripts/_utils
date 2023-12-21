@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-
 export DOTFILES=${1:-"$HOME/.dotfiles"}
+
+# source environment variables from .env
+set -a; source "${DOTFILES}/.env"; set +a
 
 e='\033'
 RESET="${e}[0m"
