@@ -175,9 +175,10 @@
 				"FIXME",
 				"TODO",
 				"XXX",
-				"[ ]",
-				"[x]",
-				"[-]"
+				"[ ]", // todo
+				"[x]", // done
+				"[-]", // cancled
+				"[>]" // moved
 			]
 		},
 		"tree":{
@@ -218,6 +219,10 @@
 				"[-]": {
 					"icon": "circle-slash",
 					"iconColor": "red"
+				},
+				"[>]": {
+					"icon": "arrow-right",
+					"iconColor": "grey"
 				}
 			}
 		}
