@@ -73,3 +73,7 @@ eval "$(sheldon source)"
 
 # autojump config
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# fix autosuggestions/paste issue
+# https://github.com/ohmyzsh/ohmyzsh/issues/5157
+export LC_CTYPE=de_DE.UTF-8
