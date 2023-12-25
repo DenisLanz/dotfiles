@@ -23,3 +23,6 @@ fi
 brew cleanup
 
 source $DOTFILES/install
+
+# install node through asdf
+source $DOTFILES/install

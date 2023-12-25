@@ -33,6 +33,7 @@ brew "ffmpeg" # Play, record, convert, and stream audio and video - https://ffmp
 brew "composer" # Dependency Manager for PHP - https://getcomposer.org/
 brew "gifsicle" # GIF image/animation creator/editor - https://www.lcdf.org/gifsicle/
 brew "fzf" # general-purpose command-line fuzzy finder - https://github.com/junegunn/fzf
+brew "asdf" # universal package management - https://github.com/asdf-vm/asdf
 
 # ------------------------------------------------------------------------------
 # Taps
