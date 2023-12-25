@@ -1,5 +1,3 @@
-zmodload zsh/zprof # start profiling
-
 # Export path to root of dotfiles repo
 export DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
 
@@ -75,5 +73,3 @@ eval "$(sheldon source)"
 
 # autojump config
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-zprof # start profiling
