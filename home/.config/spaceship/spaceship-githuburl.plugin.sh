@@ -26,10 +26,10 @@ spaceship_github_url() {
 	# If SPACESHIP_github_url_SHOW is false, don't show github_url section
 	[[ $SPACESHIP_GITHUB_URL_SHOW == false ]] && return
 
-	# Check if github_url command is available for execution
+	# Check if node is available for execution
 	spaceship::exists node || return
 
-	# Show github_url section only when there are github_url-specific files in current
+	# Show github_url section only when there is a package.json in current
 	# working directory.
 
 	# check if package.json is available
@@ -37,11 +37,11 @@ spaceship_github_url() {
 	local is_github_url_context
 	is_github_url_context="$(spaceship::upsearch package.json)"
 
-	[[ -n "$is_github_url_context" ]] || return
-
 	# 1st read the repository URL from package.json
-	local github_url
-	github_url=$(node -p "require('./package.json').repository.url")
+	if [[ -n "$is_github_url_context" ]]; then
+		local github_url
+		github_url=$(node -p "require('./package.json').repository.url")
+	fi
 
 	# 2nd check if the dir structure contains a github url
 	if [[ -z "$github_url" ]]; then
@@ -60,7 +60,7 @@ spaceship_github_url() {
 	fi
 
 	# Check if it's a github url
-	#[[ ! "$github_url" =~ ^https?://github\.com ]] && return
+	[[ ! "$github_url" =~ ^https?://github\.com ]] && return
 
 	# Display github_url section
 	# spaceship::section utility composes sections. Flags are optional
