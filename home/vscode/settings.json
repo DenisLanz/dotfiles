@@ -230,5 +230,6 @@
 	"redhat.telemetry.enabled": false,
 	"[python]": {
 		"editor.formatOnType": true
-	}
+	},
+	"terminal.integrated.env.osx": {}
 }
