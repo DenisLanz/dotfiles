@@ -1,3 +1,7 @@
+# Load Custom Sections
+
+source "$HOME/.config/spaceship/spaceship-githuburl.plugin.sh";
+
 # Spaceship Custom Configuration
 SPACESHIP_PROMPT_ORDER=(
 	#time           # Time stamps section
@@ -59,10 +63,14 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 ## configure right prompt order
-#SPACESHIP_RPROMPT_ORDER=()
+SPACESHIP_RPROMPT_ORDER=(
+	rprompt_prefix
+	github_url # github url from package.json
+	rprompt_suffix
+)
 
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=true
 SPACESHIP_RPROMPT_ADD_NEWLINE=true
 SPACESHIP_ASYNC_SYMBOL=""
 
