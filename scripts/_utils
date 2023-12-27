@@ -32,6 +32,10 @@ _exists() {
 	command -v "$1" > /dev/null 2>&1
 }
 
+_installed() {
+	brew list "$1" &>/dev/null
+}
+
 # Extend $PATH without duplicates
 _extend_path() {
     [[ -d "$1" ]] || return
