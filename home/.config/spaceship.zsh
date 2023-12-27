@@ -64,9 +64,9 @@ SPACESHIP_PROMPT_ORDER=(
 
 ## configure right prompt order
 SPACESHIP_RPROMPT_ORDER=(
-	rprompt_prefix # fix line break on RPROMPT
-	github_url # github url from package.json
-	rprompt_suffix # fix line break on RPROMPT
+	rprompt_prefix 	# fix line break on RPROMPT
+	github_url		# github url from package.json
+	rprompt_suffix 	# fix line break on RPROMPT
 )
 
 SPACESHIP_PROMPT_ADD_NEWLINE=true
