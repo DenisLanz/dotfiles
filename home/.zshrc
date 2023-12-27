@@ -1,9 +1,10 @@
 # Export path to root of dotfiles repo
 export DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
 
+# Load utilities
 source "$DOTFILES/scripts/_utils";
 
-# Add custom bin to $PATH
+# Add custom bins to $PATH
 _extend_path "$HOME/Library/Python/3.10/bin"
 _extend_path "$HOME/.composer/vendor/bin"
 _extend_path "$HOME/.config/bin"
@@ -16,9 +17,11 @@ export EDITOR=code
 # Do not override files using `>`, but it's still possible using `>!`
 set -o noclobber
 
+# load iterm shell integration
+[ -f "~/.iterm2_shell_integration.zsh" ] && source ~/.iterm2_shell_integration.zsh
+
 # ZSH Configuration
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# zsh plugins managed by sheldon
 
 # ZSH History Seetings
 HISTSIZE=50000
