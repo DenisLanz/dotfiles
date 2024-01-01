@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+source "${ROOT_DIR}/_utils"
+
+# only continue if on macOS
+_is_macOS
+
+# and install brew if it is not already installed
+if ! _exists "brew"; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if _exists "brew"; then
+	brew bundle --file=$DOTFILES/Brewfile
+fi
+
+# laod iTerm shell integrations
+if ! _installed "iterm2"; then
+	curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+fi
+
+# complete mkcert
+if _exists "mkcert"; then
+	mkcert --install
+fi
+
+# cleanup
+brew cleanup
+
+source $DOTFILES/install
+
+# install node through asdf
+source $DOTFILES/install

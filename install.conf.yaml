@@ -1,0 +1,36 @@
+- defaults:
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+
+- link:
+    ~/:
+      glob: true
+      path: home/.*
+      create: true
+      relink: true
+      force: true
+
+- link:
+    ~/Library/Application Support/Code/User/:
+      glob: true
+      path: home/vscode/**/*
+      create: true
+      relink: true
+      force: true
+
+- create:
+    - ~/.config
+
+- shell:
+    - description: Installing submodules
+      command: git submodule update --init --recursive
+
+    - description: Setup macOS defaults
+      command: ./scripts/mac

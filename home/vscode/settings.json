@@ -1,0 +1,235 @@
+{
+	"security.workspace.trust.untrustedFiles": "open",
+	"settingsSync.ignoredExtensions": [],
+	"explorer": {
+		"confirmDelete": false,
+		"confirmDragAndDrop": false
+	},
+	"search.exclude": {
+		"**/bower_components": true,
+		"**/node_modules": true,
+		"**/vendor": true,
+    "**/.git": true
+	},
+	"git": {
+		"autofetch": true,
+		"confirmSync": true,
+		"openRepositoryInParentFolders": "never"
+	},
+	"diffEditor": {
+		"wordWrap": "off",
+		"ignoreTrimWhitespace": false
+	},
+	"workbench": {
+		"colorCustomizations": {
+			"editorBracketHighlight.foreground1": "#5caeef",
+			"editorBracketHighlight.foreground2": "#dfb976",
+			"editorBracketHighlight.foreground3": "#c172d9",
+			"editorBracketHighlight.foreground4": "#4fb1bc",
+			"editorBracketHighlight.foreground5": "#97c26c",
+			"editorBracketHighlight.foreground6": "#abb2c0",
+			"editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+		},
+		"startupEditor": "none",
+		"iconTheme": "file-icons",
+		"colorTheme": "GitHub Dark Default",
+		"ecloseEmptyGroups": false
+	},
+	"editor": {
+		"accessibilitySupport": "off",
+		"bracketPairColorization.enabled": true,
+		"detectIndentation": false,
+		"fontFamily": "'Victor Mono', Menlo, Monaco, 'Courier New', monospace",
+		"fontLigatures":  "'ss01'",
+		"fontSize": 14,
+		"fontWeight": "medium",
+		"inlineSuggest.enabled": true,
+		"insertSpaces": false,
+		"semanticHighlighting.enabled": true,
+		"suggest.preview": true,
+		"tabSize": 4,
+		"defaultFormatter": "esbenp.prettier-vscode",
+		"tokenColorCustomizations": {
+			"textMateRules": [
+				{
+				"scope": [
+					//following will be in italic
+					"comment",
+					"entity.name.type.class", //class names
+					"keyword", //import, export, return…
+					"constant", //String, Number, Boolean…, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js" //class keyword
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+				},
+				{
+				"scope": [
+					//following will be excluded from italics (VSCode has some defaults for italics)
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric.decimal.js",
+					"constant.numeric.json"
+				],
+				"settings": {
+					"fontStyle": "regular"
+				}
+				}
+			]
+		},
+		"bracketPairColorization.independentColorPoolPerBracketType": true,
+		"guides.bracketPairs": true
+	},
+	"intelephense.stubs": [
+		"apache",
+		"bcmath",
+		"bz2",
+		"calendar",
+		"com_dotnet",
+		"Core",
+		"ctype",
+		"curl",
+		"date",
+		"dba",
+		"dom",
+		"enchant",
+		"exif",
+		"FFI",
+		"fileinfo",
+		"filter",
+		"fpm",
+		"ftp",
+		"gd",
+		"gettext",
+		"gmp",
+		"hash",
+		"iconv",
+		"imap",
+		"intl",
+		"json",
+		"ldap",
+		"libxml",
+		"mbstring",
+		"meta",
+		"mysqli",
+		"oci8",
+		"odbc",
+		"openssl",
+		"pcntl",
+		"pcre",
+		"PDO",
+		"pdo_ibm",
+		"pdo_mysql",
+		"pdo_pgsql",
+		"pdo_sqlite",
+		"pgsql",
+		"Phar",
+		"posix",
+		"pspell",
+		"readline",
+		"Reflection",
+		"session",
+		"shmop",
+		"SimpleXML",
+		"snmp",
+		"soap",
+		"sockets",
+		"sodium",
+		"SPL",
+		"sqlite3",
+		"standard",
+		"superglobals",
+		"sysvmsg",
+		"sysvsem",
+		"sysvshm",
+		"tidy",
+		"tokenizer",
+		"xml",
+		"xmlreader",
+		"xmlrpc",
+		"xmlwriter",
+		"xsl",
+		"Zend OPcache",
+		"zip",
+		"zlib",
+		"wordpress"
+	],
+	"indentRainbow.colors": [
+		"rgba(64,120,192,0.07)",
+		"rgba(108,198,68,0.07)",
+		"rgba(189,44,0,0.07)",
+		"rgba(201,81,12,0.07)",
+		"rgba(110,84,148,0.07)"
+	],
+	"shellcheck.customArgs": ["--external-sources"],
+	"todo-tree": {
+		"general": {
+			"showIconsInsteadOfTagsInStatusBar": true,
+			"tags": [
+				"BUG",
+				"HACK",
+				"FIXME",
+				"TODO",
+				"XXX",
+				"[ ]", // todo
+				"[x]", // done
+				"[-]", // cancled
+				"[>]" // moved
+			]
+		},
+		"tree":{
+			"showBadges": true,
+			"grouped": true
+		},
+		"highlights": {
+			"defaultHighlight": {
+				"type": "whole-line",
+				"background": "#273143",
+				"opacity": 0.2,
+				"gutterIcon": true
+			},
+			"customHighlight": {
+				"TODO": {
+					"icon": "check-circle"
+					},
+				"NOTE": {
+					"icon": "note"
+				},
+					"COMMENT": {
+					"icon": "comment"
+				},
+					"FIXME": {
+					"icon": "alert"
+				},
+					"BUG": {
+					"icon": "bug"
+				},
+				"[ ]": {
+					"icon": "check-circle",
+					"iconColor": "white"
+				},
+				"[x]": {
+					"icon": "check-circle-fill",
+					"iconColor": "green"
+				},
+				"[-]": {
+					"icon": "circle-slash",
+					"iconColor": "red"
+				},
+				"[>]": {
+					"icon": "arrow-right",
+					"iconColor": "grey"
+				}
+			}
+		}
+	},
+	"redhat.telemetry.enabled": false,
+	"[python]": {
+		"editor.formatOnType": true
+	},
+	"terminal.integrated.env.osx": {}
+}
