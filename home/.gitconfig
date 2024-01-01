@@ -1,7 +1,5 @@
-[user]
-	name = Denis Lanz
-	email = 5640155+DenisLanz@users.noreply.github.com
-
+[include]
+    path = ~/.dotfiles/local/.gitconfig
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
