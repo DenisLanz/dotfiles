@@ -64,3 +64,7 @@ _cmd_all(){
         eval "$command $param"
     done
 }
+
+_source () {
+    [[ -f "$1" ]] && source "$1"
+}
