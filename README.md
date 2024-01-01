@@ -3,7 +3,7 @@
 My personal system setup. Use at your own risk and only if you know what you're doing. Still work in progress und yet to be tested and documented.
 
 ## ToDo
-- [ ] test and update & document install order (1. git, 2. init, 3. dotbot)
+- [ ] test, update & document install order (1. git, 2. init, 3. dotbot)
 
 ## Prerequesits
 - [x] git to clone this repository
