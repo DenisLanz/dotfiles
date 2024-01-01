@@ -1,5 +1,7 @@
 # Dotfiles
 
+My personal system setup. Use at your own risk and only if you know what you're doing. Still work in progress und yet to be documented.
+
 ## Sources & Tools
 - https://github.com/anishathalye/dotbot/
 - https://github.com/rossmacarthur/sheldon
