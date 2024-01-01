@@ -11,7 +11,8 @@ if ! _exists "brew"; then
 fi
 
 if _exists "brew"; then
-	brew bundle --file=$DOTFILES/Brewfile
+	brew bundle --file="$DOTFILES/Brewfile"
+	[[ -f "$DOTFILES/local/Brewfile" ]] && brew bundle --file="$DOTFILES/local/Brewfile"
 fi
 
 # laod iTerm shell integrations
@@ -27,7 +28,3 @@ fi
 # cleanup
 brew cleanup
 
-source $DOTFILES/install
-
-# install node through asdf
-source $DOTFILES/install
