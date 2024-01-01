@@ -32,5 +32,8 @@
     - description: Installing submodules
       command: git submodule update --init --recursive
 
+    - description: Install node through asdf
+      command: ./scripts/asdf
+
     - description: Setup macOS defaults
       command: ./scripts/mac
