@@ -231,5 +231,6 @@
 	"[python]": {
 		"editor.formatOnType": true
 	},
-	"terminal.integrated.env.osx": {}
+	"terminal.integrated.env.osx": {},
+	"git.confirmSync": false
 }
