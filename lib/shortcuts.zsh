@@ -68,6 +68,7 @@ alias open='open_command'
 alias o='open'
 alias oo='open .'
 alias term='open -a iterm.app'
+alias co='code .'
 
 # Use tldr as help util
 if _exists tldr; then
@@ -76,3 +77,8 @@ fi
 
 # Quick reload of zsh environment
 alias reload="source $HOME/.zshrc"
+
+# Setup aliases from .env
+for key val in "${(@kv)SHORTCUTS}"; do
+    alias "$key"="cd '$val'"
+done
