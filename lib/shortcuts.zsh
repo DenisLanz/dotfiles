@@ -30,7 +30,7 @@ if _exists bat; then
 fi
 
 # ip address
-alias ip="echo Your ip is; dig +short myip.opendns.com @resolver1.opendns.com;"
+alias ip="echo Local IP $LAN_V4; echo Public IP $WAN_V4"
 
 # npm stuff
 alias ni='npm install'
