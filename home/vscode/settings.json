@@ -49,6 +49,10 @@
 		"suggest.preview": true,
 		"tabSize": 4,
 		"defaultFormatter": "esbenp.prettier-vscode",
+		"rulers": [80],
+		"wordWrap": "wordWrapColumn",
+		"wrappingIndent": "same",
+		"wordWrapColumn": 80,
 		"tokenColorCustomizations": {
 			"textMateRules": [
 				{
@@ -231,6 +235,5 @@
 	"[python]": {
 		"editor.formatOnType": true
 	},
-	"terminal.integrated.env.osx": {},
 	"git.confirmSync": false
 }
