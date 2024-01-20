@@ -35,6 +35,7 @@ brew "gifsicle" # GIF image/animation creator/editor - https://www.lcdf.org/gifs
 brew "fzf" # general-purpose command-line fuzzy finder - https://github.com/junegunn/fzf
 brew "asdf" # universal package management - https://github.com/asdf-vm/asdf
 brew "multitail" # follows files in style, it is tail on steroids. - https://github.com/folkertvanheusden/multitail/
+brew "mcfly" # shell history search replacement - https://github.com/cantino/mcfly
 
 # ------------------------------------------------------------------------------
 # Taps
