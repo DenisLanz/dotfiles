@@ -235,5 +235,10 @@
 	"[python]": {
 		"editor.formatOnType": true
 	},
-	"git.confirmSync": false
+	"git.confirmSync": false,
+	"makefile": {
+		"buildBeforeLaunch": false,
+		"clearOutputBeforeBuild": false,
+		"configureOnEdit": false
+	}
 }
