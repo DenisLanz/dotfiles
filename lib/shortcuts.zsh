@@ -20,6 +20,10 @@ fi
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+#Show/hide all hidden files in Finder
+alias showfiles="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefiles="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
 # cat with syntax highlighting
 # https://github.com/sharkdp/bat
 if _exists bat; then
