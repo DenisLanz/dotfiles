@@ -43,6 +43,7 @@ brew "sheldon" # Fast, configurable, shell plugin manager - https://github.com/r
 # ------------------------------------------------------------------------------
 
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 
 # ------------------------------------------------------------------------------
 # Casks
