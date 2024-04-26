@@ -11,6 +11,9 @@ _extend_path "$HOME/.config/bin"
 _extend_path "/usr/local/bin"
 _extend_path "/usr/local/sbin"
 
+# Init Homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
+
 # Set Editor
 export EDITOR=code
 
