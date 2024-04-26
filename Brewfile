@@ -63,7 +63,7 @@ cask "airfoil"
 # Utils
 cask "monitorcontrol"
 cask "little-snitch"
-cask "divvy"
+cask "rectangle"
 cask "contexts"
 cask "micro-snitch"
 cask "hazel"
