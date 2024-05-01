@@ -3,3 +3,4 @@ local/**/*
 !local/README.md
 .env
 home/.config/1Password
+home/.config/Autodesk/*
