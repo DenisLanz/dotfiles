@@ -69,7 +69,7 @@ cask "contexts"
 cask "micro-snitch"
 cask "hazel"
 cask "bluesnooze" # https://github.com/odlp/bluesnooze
-cask "beardedspice"
+cask "reflex" # https://stuntsoftware.com/reflex/
 cask "bartender"
 cask "maestral" # https://github.com/samschott/maestral
 cask "hazel"
