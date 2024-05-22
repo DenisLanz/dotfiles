@@ -83,8 +83,8 @@ cask "docker"
 cask "iterm2"
 
 # Browser
-cask "firefox-developer-edition"
 cask "firefox"
+cask "firefox@developer-edition"
 cask "google-chrome"
 cask "chromium"
 
