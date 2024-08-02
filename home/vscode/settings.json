@@ -242,5 +242,6 @@
 		"buildBeforeLaunch": false,
 		"clearOutputBeforeBuild": false,
 		"configureOnEdit": false
-	}
+	},
+	"application.shellEnvironmentResolutionTimeout": 30
 }
