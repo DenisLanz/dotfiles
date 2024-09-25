@@ -242,5 +242,12 @@
 		"buildBeforeLaunch": false,
 		"clearOutputBeforeBuild": false,
 		"configureOnEdit": false
+	},
+	"application.shellEnvironmentResolutionTimeout": 30,
+	"files.exclude": {
+		"**/.git": false
+	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	}
 }
