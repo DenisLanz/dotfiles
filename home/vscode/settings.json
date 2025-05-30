@@ -1,6 +1,8 @@
 {
 	"security.workspace.trust.untrustedFiles": "open",
-	"settingsSync.ignoredExtensions": [],
+	"settingsSync.ignoredExtensions": [
+		"mikeebowen.ooxml-extension-pack"
+	],
 	"explorer": {
 		"confirmDelete": false,
 		"confirmDragAndDrop": false
@@ -40,7 +42,7 @@
 		"accessibilitySupport": "off",
 		"bracketPairColorization.enabled": true,
 		"detectIndentation": false,
-		"fontFamily": "'Victor Mono', Menlo, Monaco, 'Courier New', monospace",
+		"fontFamily": "'VictorMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
 		"fontLigatures":  "'ss01'",
 		"fontSize": 14,
 		"fontWeight": "medium",
@@ -249,5 +251,9 @@
 	},
 	"[php]": {
 		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-	}
+	},
+	"settingsSync.ignoredSettings": [
+		"github-actions.use-enterprise"
+	],
+	"github-actions.use-enterprise": true
 }
