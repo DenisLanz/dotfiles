@@ -37,6 +37,11 @@ brew "asdf" # universal package management - https://github.com/asdf-vm/asdf
 brew "multitail" # follows files in style, it is tail on steroids. - https://github.com/folkertvanheusden/multitail/
 brew "mcfly" # shell history search replacement - https://github.com/cantino/mcfly
 brew "sheldon" # Fast, configurable, shell plugin manager - https://github.com/rossmacarthur/sheldon
+brew "starship" # CROSS-SHELL PROMPT - https://starship.rs/
+
+# Dictionaries
+brew "tekl/dictionaries/beolingus-deutsch-englisch" # Beolingus Deutsch-Englisch Dictionary -
+brew "brew install tekl/dictionaries/openthesaurus-deutsch" # OpenThesaurus Deutsch - https://www.openthesaurus.de/
 
 # ------------------------------------------------------------------------------
 # Taps
