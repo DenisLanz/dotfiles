@@ -42,9 +42,9 @@
 		"accessibilitySupport": "off",
 		"bracketPairColorization.enabled": true,
 		"detectIndentation": false,
-		"fontFamily": "'VictorMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
 		"fontLigatures":  "'ss01'",
 		"fontSize": 14,
+		"fontFamily": "'Victor Mono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
 		"fontWeight": "medium",
 		"inlineSuggest.enabled": true,
 		"insertSpaces": false,
@@ -61,13 +61,12 @@
 			"textMateRules": [
 				{
 				"scope": [
-					//following will be in italic
 					"comment",
-					"entity.name.type.class", //class names
-					"keyword", //import, export, return…
-					"constant", //String, Number, Boolean…, this, super
-					"storage.modifier", //static keyword
-					"storage.type.class.js" //class keyword
+					"entity.name.type.class",
+					"keyword",
+					"constant",
+					"storage.modifier",
+					"storage.type.class.js"
 				],
 				"settings": {
 					"fontStyle": "italic"
@@ -75,7 +74,6 @@
 				},
 				{
 				"scope": [
-					//following will be excluded from italics (VSCode has some defaults for italics)
 					"invalid",
 					"keyword.operator",
 					"constant.numeric.css",
@@ -183,10 +181,10 @@
 				"FIXME",
 				"TODO",
 				"XXX",
-				"[ ]", // todo
-				"[x]", // done
-				"[-]", // cancled
-				"[>]" // moved
+				"[ ]",
+				"[x]",
+				"[-]",
+				"[>]"
 			]
 		},
 		"tree":{
