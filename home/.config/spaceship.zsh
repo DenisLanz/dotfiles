@@ -71,7 +71,6 @@ SPACESHIP_RPROMPT_ORDER=(
 
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_RPROMPT_ADD_NEWLINE=true
 SPACESHIP_ASYNC_SYMBOL=""
 
 CHAR_SYMBOL="%{$fg_bold[grey]%}❯%{$reset_color%}%{$fg_bold[lightgrey]%}❯%{$reset_color%}%{$fg_bold[white]%}❯%{$reset_color%}"

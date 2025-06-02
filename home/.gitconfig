@@ -153,3 +153,11 @@ renames = copies
 [push]
     default = current
     autoSetupRemote = true
+[credential]
+	helper = store
+[user]
+	name = Denis Lanz
+	email = denis.lanz@sap.com
+	signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN+4IAoYnq+9YnshnBXiem2uu8XEKMwXW+suHbP+u1/I Github
+[gpg]
+	format = ssh
