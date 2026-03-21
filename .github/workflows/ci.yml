@@ -44,4 +44,4 @@ jobs:
             - uses: actions/checkout@v4
 
             - name: Validate Brewfile syntax
-              run: brew bundle --dry-run --file=Brewfile
+              run: brew bundle list --all --file=Brewfile
