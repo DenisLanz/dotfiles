@@ -33,8 +33,11 @@ if _exists bat; then
 	alias cat='bat'
 fi
 
-# ip address
-alias ip="echo Local IP $LAN_V4; echo Public IP $WAN_V4"
+# ip address (calls lazy functions from lib/environment.zsh)
+ip() {
+	echo "Local  IP: $(lan_v4)"
+	echo "Public IP: $(wan_v4)"
+}
 
 # npm stuff
 alias ni='npm install'
