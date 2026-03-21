@@ -1,8 +1,6 @@
 {
 	"security.workspace.trust.untrustedFiles": "open",
-	"settingsSync.ignoredExtensions": [
-		"mikeebowen.ooxml-extension-pack"
-	],
+	"settingsSync.ignoredExtensions": ["mikeebowen.ooxml-extension-pack"],
 	"explorer": {
 		"confirmDelete": false,
 		"confirmDragAndDrop": false
@@ -11,11 +9,11 @@
 		"**/bower_components": true,
 		"**/node_modules": true,
 		"**/vendor": true,
-    "**/.git": true
+		"**/.git": true
 	},
 	"git": {
 		"autofetch": true,
-		"confirmSync": true,
+		"confirmSync": false,
 		"openRepositoryInParentFolders": "never"
 	},
 	"diffEditor": {
@@ -34,7 +32,7 @@
 		},
 		"startupEditor": "none",
 		"iconTheme": "file-icons",
-		"colorTheme": "GitHub Dark Default",
+		"colorTheme": "Alabaster Dark",
 		"ecloseEmptyGroups": false,
 		"tree.enableStickyScroll": true
 	},
@@ -42,9 +40,9 @@
 		"accessibilitySupport": "off",
 		"bracketPairColorization.enabled": true,
 		"detectIndentation": false,
-		"fontFamily": "'VictorMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
-		"fontLigatures":  "'ss01'",
+		"fontLigatures": "'ss01'",
 		"fontSize": 14,
+		"fontFamily": "'Victor Mono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
 		"fontWeight": "medium",
 		"inlineSuggest.enabled": true,
 		"insertSpaces": false,
@@ -52,6 +50,7 @@
 		"suggest.preview": true,
 		"tabSize": 4,
 		"defaultFormatter": "esbenp.prettier-vscode",
+		"formatOnSave": true,
 		"rulers": [80],
 		"wordWrap": "wordWrapColumn",
 		"wrappingIndent": "same",
@@ -60,32 +59,30 @@
 		"tokenColorCustomizations": {
 			"textMateRules": [
 				{
-				"scope": [
-					//following will be in italic
-					"comment",
-					"entity.name.type.class", //class names
-					"keyword", //import, export, return…
-					"constant", //String, Number, Boolean…, this, super
-					"storage.modifier", //static keyword
-					"storage.type.class.js" //class keyword
-				],
-				"settings": {
-					"fontStyle": "italic"
-				}
+					"scope": [
+						"comment",
+						"entity.name.type.class",
+						"keyword",
+						"constant",
+						"storage.modifier",
+						"storage.type.class.js"
+					],
+					"settings": {
+						"fontStyle": "italic"
+					}
 				},
 				{
-				"scope": [
-					//following will be excluded from italics (VSCode has some defaults for italics)
-					"invalid",
-					"keyword.operator",
-					"constant.numeric.css",
-					"keyword.other.unit.px.css",
-					"constant.numeric.decimal.js",
-					"constant.numeric.json"
-				],
-				"settings": {
-					"fontStyle": "regular"
-				}
+					"scope": [
+						"invalid",
+						"keyword.operator",
+						"constant.numeric.css",
+						"keyword.other.unit.px.css",
+						"constant.numeric.decimal.js",
+						"constant.numeric.json"
+					],
+					"settings": {
+						"fontStyle": "regular"
+					}
 				}
 			]
 		},
@@ -183,13 +180,13 @@
 				"FIXME",
 				"TODO",
 				"XXX",
-				"[ ]", // todo
-				"[x]", // done
-				"[-]", // cancled
-				"[>]" // moved
+				"[ ]",
+				"[x]",
+				"[-]",
+				"[>]"
 			]
 		},
-		"tree":{
+		"tree": {
 			"showBadges": true,
 			"grouped": true
 		},
@@ -203,17 +200,17 @@
 			"customHighlight": {
 				"TODO": {
 					"icon": "check-circle"
-					},
+				},
 				"NOTE": {
 					"icon": "note"
 				},
-					"COMMENT": {
+				"COMMENT": {
 					"icon": "comment"
 				},
-					"FIXME": {
+				"FIXME": {
 					"icon": "alert"
 				},
-					"BUG": {
+				"BUG": {
 					"icon": "bug"
 				},
 				"[ ]": {
@@ -239,7 +236,6 @@
 	"[python]": {
 		"editor.formatOnType": true
 	},
-	"git.confirmSync": false,
 	"makefile": {
 		"buildBeforeLaunch": false,
 		"clearOutputBeforeBuild": false,
@@ -252,8 +248,12 @@
 	"[php]": {
 		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	},
-	"settingsSync.ignoredSettings": [
-		"github-actions.use-enterprise"
-	],
-	"github-actions.use-enterprise": true
+	"settingsSync.ignoredSettings": ["github-actions.use-enterprise"],
+	"github-actions.use-enterprise": true,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"workbench.editor.enablePreview": false,
+	"workbench.editorAssociations": {
+		"*.svg": "default"
+	},
+	"chat.viewSessions.orientation": "stacked"
 }
