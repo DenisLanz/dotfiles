@@ -22,7 +22,7 @@ brew "topgrade" # Upgrade all the things - https://github.com/topgrade-rs/topgra
 brew "terminal-notifier" # send notifications from the terminal - https://github.com/julienXX/terminal-notifier
 brew "tlrc" # simpler, more approachable complement to traditional man pages - https://github.com/tldr-pages/tldr
 brew "bat" # cat with syntax highlighting - https://github.com/sharkdp/bat
-brew "youtube-dl" # commandline tool to download youtube and other media - https://github.com/ytdl-org/youtube-dl
+brew "yt-dlp" # youtube-dl fork with more features and active maintenance - https://github.com/yt-dlp/yt-dlp
 brew "mas" # Mac App Store command-line interface - https://github.com/mas-cli/mas
 brew "ffmpeg" # multimedia handling - https://github.com/FFmpeg/FFmpeg
 brew "tesseract-lang" # languages for OCR - https://github.com/tesseract-ocr/tesseract
