@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 ROOT_DIR="$( dirname "${BASH_SOURCE[0]:-$0}" )"
+# shellcheck source=scripts/_utils
 source "${ROOT_DIR}/_utils"
 
 # only continue if on macOS
@@ -8,7 +9,8 @@ _is_macOS
 # and install brew if it is not already installed
 if ! _exists "brew"; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/D052787/.zprofile
+	# shellcheck disable=SC2016  # single quotes intentional: literal $() written to .zprofile
+	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$HOME/.zprofile"
     	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 

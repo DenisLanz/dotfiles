@@ -22,26 +22,24 @@ brew "topgrade" # Upgrade all the things - https://github.com/topgrade-rs/topgra
 brew "terminal-notifier" # send notifications from the terminal - https://github.com/julienXX/terminal-notifier
 brew "tlrc" # simpler, more approachable complement to traditional man pages - https://github.com/tldr-pages/tldr
 brew "bat" # cat with syntax highlighting - https://github.com/sharkdp/bat
-brew "youtube-dl" # commandline tool to download youtube and other media - https://github.com/ytdl-org/youtube-dl
+brew "yt-dlp" # youtube-dl fork with more features and active maintenance - https://github.com/yt-dlp/yt-dlp
 brew "mas" # Mac App Store command-line interface - https://github.com/mas-cli/mas
 brew "ffmpeg" # multimedia handling - https://github.com/FFmpeg/FFmpeg
 brew "tesseract-lang" # languages for OCR - https://github.com/tesseract-ocr/tesseract
 brew "qpdf" # content-preserving transformations on PDF files - https://github.com/qpdf/qpdf
 brew "ocrmypdf" # OCR PDF Files (tesseract abstraction) - https://github.com/ocrmypdf/OCRmyPDF
 brew "m-cli" # macOS command line tool - https://github.com/rgcr/m-cli
-brew "ffmpeg" # Play, record, convert, and stream audio and video - https://ffmpeg.org/
 brew "composer" # Dependency Manager for PHP - https://getcomposer.org/
 brew "gifsicle" # GIF image/animation creator/editor - https://www.lcdf.org/gifsicle/
 brew "fzf" # general-purpose command-line fuzzy finder - https://github.com/junegunn/fzf
 brew "asdf" # universal package management - https://github.com/asdf-vm/asdf
 brew "multitail" # follows files in style, it is tail on steroids. - https://github.com/folkertvanheusden/multitail/
-brew "mcfly" # shell history search replacement - https://github.com/cantino/mcfly
 brew "sheldon" # Fast, configurable, shell plugin manager - https://github.com/rossmacarthur/sheldon
 brew "starship" # CROSS-SHELL PROMPT - https://starship.rs/
 
 # Dictionaries
 brew "tekl/dictionaries/beolingus-deutsch-englisch" # Beolingus Deutsch-Englisch Dictionary -
-brew "brew install tekl/dictionaries/openthesaurus-deutsch" # OpenThesaurus Deutsch - https://www.openthesaurus.de/
+brew "tekl/dictionaries/openthesaurus-deutsch" # OpenThesaurus Deutsch - https://www.openthesaurus.de/
 
 # ------------------------------------------------------------------------------
 # Taps
@@ -49,8 +47,8 @@ brew "brew install tekl/dictionaries/openthesaurus-deutsch" # OpenThesaurus Deut
 
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-
 # ------------------------------------------------------------------------------
+
 # Casks
 # ------------------------------------------------------------------------------
 
@@ -60,11 +58,13 @@ cask "alfred"
 cask "fliqlo"
 cask "keycastr"
 cask "marked"
+cask "marked-app"
 cask "obsidian"
 cask "rocket"
 cask "spotify"
 cask "typeface"
 cask "airfoil"
+cask "thaw"
 
 # Utils
 cask "monitorcontrol"
@@ -73,21 +73,21 @@ cask "rectangle"
 cask "contexts"
 cask "micro-snitch"
 cask "hazel"
-cask "reflex" # https://stuntsoftware.com/reflex/
-cask "bartender"
+cask "reflex" # https://stuntsoftware.com/reflex/ - NOTE: may fail with checksum mismatch
 cask "hazel"
 
 # Development
 cask "visual-studio-code"
 cask "transmit"
 cask "tower"
-cask "kaleidoscope2"
 cask "docker"
+cask "docker-desktop"
 cask "iterm2"
 
 # Browser
 cask "firefox"
 cask "firefox@developer-edition"
+cask "firefox-developer-edition"
 cask "google-chrome"
 cask "chromium"
 
@@ -106,7 +106,7 @@ cask "qlmarkdown" # https://github.com/sbarex/QLMarkdown
 # Mac Appstore Applications
 # ------------------------------------------------------------------------------
 
-mas "StopTheMadness", id: 1376402589
+mas "StopTheMadness Pro", id: 6471380298
 mas "Drafts", id: 1435957248
 mas "Gifox 2: GIF Recorder & Editor", id: 1461845568
 mas "Dato", id: 1470584107
@@ -118,7 +118,7 @@ mas "TextSniper", id: 1528890965
 mas "Reeder", id: 1529448980
 mas "Color Picker", id: 1545870783
 mas "Play", id: 1596506190
-mas "Velia", id: 1607635845
+mas "Velja", id: 1607635845
 mas "UnTrap", id: 1637438059
 mas "The Magic Highlighter", id: 1663033087
 mas "Deliveries", id: 290986013
@@ -129,7 +129,10 @@ mas "Things", id: 904280696
 mas "Amphetamine", id: 937984704
 mas "Sequel Ace", id: 1518036000
 mas "Spark", id: 1176895641
-mas "ytdistract", id: 1637438059
 mas "1Password for Safari", id: 1569813296
 mas "One Thing", id: 1604176982
 mas "Folder Peek", id: 1615988943
+mas "Actions", id: 1586435171
+mas "Actions For Obsidian", id: 1659667937
+mas "Obsidian Web Clipper", id: 6720708363
+mas "Googly Eyes", id: 6743048714

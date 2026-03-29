@@ -1,0 +1,47 @@
+name: CI
+
+on:
+    push:
+        branches: [main, master]
+    pull_request:
+        branches: [main, master]
+
+jobs:
+    shellcheck:
+        name: ShellCheck
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Run ShellCheck on bash scripts
+              uses: ludeeus/action-shellcheck@master
+              with:
+                  # zsh files are excluded — shellcheck doesn't support zsh natively
+                  scandir: "./scripts"
+                  additional_files: "install"
+
+    yamllint:
+        name: YAML Lint
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Run yamllint
+              uses: ibiqlik/action-yamllint@v3
+              with:
+                  file_or_dir: install.conf.yaml
+                  config_data: |
+                      extends: default
+                      rules:
+                        line-length: disable
+                        truthy:
+                          allowed-values: ['true', 'false']
+
+    brewfile:
+        name: Brewfile Lint
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Validate Brewfile syntax
+              run: brew bundle list --all --file=Brewfile
