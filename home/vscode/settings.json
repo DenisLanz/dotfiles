@@ -1,26 +1,24 @@
 {
 	"security.workspace.trust.untrustedFiles": "open",
-	"settingsSync.ignoredExtensions": [
-		"mikeebowen.ooxml-extension-pack"
-	],
+	"settingsSync.ignoredExtensions": ["mikeebowen.ooxml-extension-pack"],
 	"explorer": {
 		"confirmDelete": false,
-		"confirmDragAndDrop": false
+		"confirmDragAndDrop": false,
 	},
 	"search.exclude": {
 		"**/bower_components": true,
 		"**/node_modules": true,
 		"**/vendor": true,
-    "**/.git": true
+		"**/.git": true,
 	},
 	"git": {
 		"autofetch": true,
-		"confirmSync": true,
-		"openRepositoryInParentFolders": "never"
+		"confirmSync": false,
+		"openRepositoryInParentFolders": "never",
 	},
 	"diffEditor": {
 		"wordWrap": "off",
-		"ignoreTrimWhitespace": false
+		"ignoreTrimWhitespace": false,
 	},
 	"workbench": {
 		"colorCustomizations": {
@@ -30,19 +28,19 @@
 			"editorBracketHighlight.foreground4": "#4fb1bc",
 			"editorBracketHighlight.foreground5": "#97c26c",
 			"editorBracketHighlight.foreground6": "#abb2c0",
-			"editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+			"editorBracketHighlight.unexpectedBracket.foreground": "#db6165",
 		},
 		"startupEditor": "none",
 		"iconTheme": "file-icons",
-		"colorTheme": "GitHub Dark Default",
+		"colorTheme": "Alabaster Dark",
 		"ecloseEmptyGroups": false,
-		"tree.enableStickyScroll": true
+		"tree.enableStickyScroll": true,
 	},
 	"editor": {
 		"accessibilitySupport": "off",
 		"bracketPairColorization.enabled": true,
 		"detectIndentation": false,
-		"fontLigatures":  "'ss01'",
+		"fontLigatures": "'ss01'",
 		"fontSize": 14,
 		"fontFamily": "'Victor Mono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
 		"fontWeight": "medium",
@@ -52,6 +50,7 @@
 		"suggest.preview": true,
 		"tabSize": 4,
 		"defaultFormatter": "esbenp.prettier-vscode",
+		"formatOnSave": true,
 		"rulers": [80],
 		"wordWrap": "wordWrapColumn",
 		"wrappingIndent": "same",
@@ -60,35 +59,35 @@
 		"tokenColorCustomizations": {
 			"textMateRules": [
 				{
-				"scope": [
-					"comment",
-					"entity.name.type.class",
-					"keyword",
-					"constant",
-					"storage.modifier",
-					"storage.type.class.js"
-				],
-				"settings": {
-					"fontStyle": "italic"
-				}
+					"scope": [
+						"comment",
+						"entity.name.type.class",
+						"keyword",
+						"constant",
+						"storage.modifier",
+						"storage.type.class.js",
+					],
+					"settings": {
+						"fontStyle": "italic",
+					},
 				},
 				{
-				"scope": [
-					"invalid",
-					"keyword.operator",
-					"constant.numeric.css",
-					"keyword.other.unit.px.css",
-					"constant.numeric.decimal.js",
-					"constant.numeric.json"
-				],
-				"settings": {
-					"fontStyle": "regular"
-				}
-				}
-			]
+					"scope": [
+						"invalid",
+						"keyword.operator",
+						"constant.numeric.css",
+						"keyword.other.unit.px.css",
+						"constant.numeric.decimal.js",
+						"constant.numeric.json",
+					],
+					"settings": {
+						"fontStyle": "regular",
+					},
+				},
+			],
 		},
 		"bracketPairColorization.independentColorPoolPerBracketType": true,
-		"guides.bracketPairs": true
+		"guides.bracketPairs": true,
 	},
 	"intelephense.stubs": [
 		"apache",
@@ -162,14 +161,14 @@
 		"Zend OPcache",
 		"zip",
 		"zlib",
-		"wordpress"
+		"wordpress",
 	],
 	"indentRainbow.colors": [
 		"rgba(64,120,192,0.07)",
 		"rgba(108,198,68,0.07)",
 		"rgba(189,44,0,0.07)",
 		"rgba(201,81,12,0.07)",
-		"rgba(110,84,148,0.07)"
+		"rgba(110,84,148,0.07)",
 	],
 	"shellcheck.customArgs": ["--external-sources"],
 	"todo-tree": {
@@ -184,74 +183,77 @@
 				"[ ]",
 				"[x]",
 				"[-]",
-				"[>]"
-			]
+				"[>]",
+			],
 		},
-		"tree":{
+		"tree": {
 			"showBadges": true,
-			"grouped": true
+			"grouped": true,
 		},
 		"highlights": {
 			"defaultHighlight": {
 				"type": "whole-line",
 				"background": "#273143",
 				"opacity": 0.2,
-				"gutterIcon": true
+				"gutterIcon": true,
 			},
 			"customHighlight": {
 				"TODO": {
-					"icon": "check-circle"
-					},
+					"icon": "check-circle",
+				},
 				"NOTE": {
-					"icon": "note"
+					"icon": "note",
 				},
-					"COMMENT": {
-					"icon": "comment"
+				"COMMENT": {
+					"icon": "comment",
 				},
-					"FIXME": {
-					"icon": "alert"
+				"FIXME": {
+					"icon": "alert",
 				},
-					"BUG": {
-					"icon": "bug"
+				"BUG": {
+					"icon": "bug",
 				},
 				"[ ]": {
 					"icon": "check-circle",
-					"iconColor": "white"
+					"iconColor": "white",
 				},
 				"[x]": {
 					"icon": "check-circle-fill",
-					"iconColor": "green"
+					"iconColor": "green",
 				},
 				"[-]": {
 					"icon": "circle-slash",
-					"iconColor": "red"
+					"iconColor": "red",
 				},
 				"[>]": {
 					"icon": "arrow-right",
-					"iconColor": "grey"
-				}
-			}
-		}
+					"iconColor": "grey",
+				},
+			},
+		},
 	},
 	"redhat.telemetry.enabled": false,
 	"[python]": {
-		"editor.formatOnType": true
+		"editor.formatOnType": true,
 	},
-	"git.confirmSync": false,
 	"makefile": {
 		"buildBeforeLaunch": false,
 		"clearOutputBeforeBuild": false,
-		"configureOnEdit": false
+		"configureOnEdit": false,
 	},
 	"application.shellEnvironmentResolutionTimeout": 30,
 	"files.exclude": {
-		"**/.git": false
+		"**/.git": false,
 	},
 	"[php]": {
-		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
 	},
-	"settingsSync.ignoredSettings": [
-		"github-actions.use-enterprise"
-	],
-	"github-actions.use-enterprise": true
+	"settingsSync.ignoredSettings": ["github-actions.use-enterprise"],
+	"github-actions.use-enterprise": true,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"workbench.editor.enablePreview": false,
+	"workbench.editorAssociations": {
+		"*.svg": "default",
+	},
+	"chat.viewSessions.orientation": "stacked",
 }
