@@ -89,3 +89,6 @@ alias reload="source $HOME/.zshrc"
 for key val in "${(@kv)SHORTCUTS}"; do
     alias "$key"="cd '$val'"
 done
+
+# Flush DNS cache
+alias fdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "DNS cache flushed."'
