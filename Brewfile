@@ -76,6 +76,7 @@ cask "bluesnooze" # https://github.com/odlp/bluesnooze
 cask "reflex" # https://stuntsoftware.com/reflex/ - NOTE: may fail with checksum mismatch
 cask "maestral" # https://github.com/samschott/maestral
 cask "hazel"
+cask "imageoptim"
 
 # Development
 cask "visual-studio-code"
